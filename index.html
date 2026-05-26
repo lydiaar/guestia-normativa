@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Güestia — Wiki de Normativa Interna</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --purple: #7C3AED;
+    --purple-light: #EDE9FE;
+    --purple-mid: #A78BFA;
+    --purple-dark: #4C1D95;
+    --gold: #D97706;
+    --gold-light: #FEF3C7;
+    --red: #DC2626;
+    --red-light: #FEE2E2;
+    --green: #059669;
+    --green-light: #D1FAE5;
+    --gray-50: #F9FAFB;
+    --gray-100: #F3F4F6;
+    --gray-200: #E5E7EB;
+    --gray-400: #9CA3AF;
+    --gray-500: #6B7280;
+    --gray-600: #4B5563;
+    --gray-700: #374151;
+    --gray-900: #111827;
+    --sidebar-w: 280px;
+    --header-h: 56px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--gray-50);
+    color: var(--gray-700);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    height: var(--header-h);
+    background: var(--purple-dark);
+    display: flex; align-items: center; gap: 16px;
+    padding: 0 24px;
+    box-shadow: 0 2px 12px rgba(76,29,149,0.3);
+  }
+  .logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px; color: white; letter-spacing: 0.01em;
+    flex: 1;
+  }
+  .logo span { color: var(--purple-mid); }
+
+  .header-badge {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--purple-mid);
+    background: rgba(167,139,250,0.15);
+    border: 1px solid rgba(167,139,250,0.3);
+    padding: 3px 10px; border-radius: 20px;
+  }
+
+
+
+  /* ── LAYOUT ── */
+  .layout {
+    display: flex;
+    margin-top: var(--header-h);
+    min-height: calc(100vh - var(--header-h));
+  }
+
+  /* ── SIDEBAR ── */
+  aside {
+    width: var(--sidebar-w);
+    flex-shrink: 0;
+    position: fixed;
+    top: var(--header-h);
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    background: white;
+    border-right: 1px solid var(--gray-200);
+    padding: 24px 0 40px;
+  }
+
+  .sidebar-section {
+    padding: 0 16px 8px;
+    font-size: 10px; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--gray-400);
+    margin-top: 20px;
+  }
+
+  .nav-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 20px;
+    cursor: pointer;
+    color: var(--gray-600);
+    font-size: 14px;
+    border-left: 3px solid transparent;
+    transition: all 0.15s;
+    text-decoration: none;
+  }
+  .nav-item:hover { background: var(--gray-50); color: var(--purple); }
+  .nav-item.active {
+    background: var(--purple-light);
+    color: var(--purple);
+    border-left-color: var(--purple);
+    font-weight: 600;
+  }
+  .nav-item .nav-icon { font-size: 16px; flex-shrink: 0; }
+  .nav-item .nav-code {
+    margin-left: auto; font-size: 11px; color: var(--gray-400);
+    font-weight: 400; font-family: monospace;
+  }
+
+  /* ── MAIN CONTENT ── */
+  main {
+    margin-left: var(--sidebar-w);
+    flex: 1;
+    padding: 40px 48px 80px;
+    max-width: 900px;
+  }
+
+  /* ── SECTIONS ── */
+  .section { display: none; }
+  .section.active { display: block; }
+
+  .section-header {
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--gray-200);
+  }
+  .section-eyebrow {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--purple);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px; color: var(--gray-900); line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .section-meta {
+    font-size: 13px; color: var(--gray-500);
+    display: flex; gap: 20px; flex-wrap: wrap;
+  }
+  .section-meta span { display: flex; align-items: center; gap: 5px; }
+
+  /* ── SUBSECTIONS ── */
+  h2.block-h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px; color: var(--purple-dark);
+    margin: 36px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--purple-light);
+  }
+  h3.block-h3 {
+    font-size: 15px; font-weight: 600; color: var(--gray-700);
+    margin: 24px 0 10px;
+  }
+
+  /* ── EDITABLE BLOCKS ── */
+  .block {
+    margin: 12px 0;
+    border-radius: 8px;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  .block-content {
+    padding: 2px 4px;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    outline: none;
+    min-height: 1.5em;
+    transition: border-color 0.15s, background 0.15s;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+
+
+  .block-p .block-content { font-size: 15px; line-height: 1.75; color: var(--gray-700); }
+  .block-bullet .block-content {
+    font-size: 15px; line-height: 1.7; color: var(--gray-700);
+    padding-left: 20px;
+  }
+  .block-bullet .block-content::before {
+    content: "•";
+    position: absolute; left: 4px; color: var(--purple-mid);
+    font-size: 16px; line-height: 1.6;
+  }
+  .block-bullet { position: relative; }
+
+  /* ── ARTICLE CARDS ── */
+  .article-card {
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .article-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+
+  .article-header {
+    display: flex; align-items: center; gap: 12px;
+    padding: 14px 18px;
+    background: var(--purple-light);
+    border-bottom: 1px solid rgba(124,58,237,0.12);
+  }
+  .article-code {
+    font-family: monospace; font-size: 13px; font-weight: 700;
+    color: var(--purple); background: white;
+    padding: 3px 10px; border-radius: 6px;
+    border: 1px solid rgba(124,58,237,0.2);
+  }
+  .article-date {
+    font-size: 12px; color: var(--gray-500); font-style: italic;
+  }
+  .article-body { padding: 16px 18px; }
+
+  /* ── NOTE BOXES ── */
+  .note-box {
+    padding: 12px 16px; border-radius: 8px; margin: 12px 0;
+    font-size: 14px; line-height: 1.6;
+    border-left: 4px solid;
+  }
+  .note-box.warning { background: var(--gold-light); border-color: var(--gold); color: #92400E; }
+  .note-box.info { background: var(--purple-light); border-color: var(--purple); color: var(--purple-dark); }
+  .note-box.derogada { background: var(--red-light); border-color: var(--red); color: var(--red); }
+  .note-box.pending { background: var(--green-light); border-color: var(--green); color: #065F46; }
+
+  .note-box strong { font-weight: 600; }
+
+  .note-box .block-content {
+    font-size: 14px; color: inherit;
+  }
+
+  /* ── HOME SECTION ── */
+  .home-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 16px; margin-top: 24px;
+  }
+  .home-card {
+    background: white; border: 1px solid var(--gray-200);
+    border-radius: 10px; padding: 20px;
+    cursor: pointer; transition: all 0.2s;
+    text-decoration: none; color: inherit;
+    display: flex; gap: 14px; align-items: flex-start;
+  }
+  .home-card:hover {
+    border-color: var(--purple-mid);
+    box-shadow: 0 4px 16px rgba(124,58,237,0.12);
+    transform: translateY(-2px);
+  }
+  .home-card .card-icon { font-size: 28px; flex-shrink: 0; }
+  .home-card .card-title { font-weight: 600; font-size: 14px; color: var(--gray-900); margin-bottom: 4px; }
+  .home-card .card-desc { font-size: 13px; color: var(--gray-500); line-height: 1.5; }
+
+  .intro-box {
+    background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple) 100%);
+    border-radius: 12px; padding: 28px 32px; color: white; margin-bottom: 32px;
+  }
+  .intro-box h2 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 10px; }
+  .intro-box p { font-size: 14px; opacity: 0.85; line-height: 1.7; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    aside { display: none; }
+    main { margin-left: 0; padding: 20px 16px 60px; }
+    .home-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── PRINT ── */
+  @media print { aside { display: none; } main { margin-left: 0; } }
+
+  /* scrollbar */
+  aside::-webkit-scrollbar { width: 4px; }
+  aside::-webkit-scrollbar-track { background: transparent; }
+  aside::-webkit-scrollbar-thumb { background: var(--gray-200); border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">La <span>Güestia</span> Roller Derby</div>
+  <span class="header-badge">Wiki Normativa</span>
+
+</header>
+
+<div class="layout">
+  <aside id="sidebar">
+    <div class="sidebar-section">Inicio</div>
+    <a class="nav-item active" onclick="showSection('home')" href="#">
+      <span class="nav-icon">🏠</span> Inicio
+    </a>
+
+    <div class="sidebar-section">Comités</div>
+    <a class="nav-item" onclick="showSection('ent')" href="#">
+      <span class="nav-icon">🛼</span> Entrenamientos <span class="nav-code">ENT</span>
+    </a>
+    <a class="nav-item" onclick="showSection('int')" href="#">
+      <span class="nav-icon">🤝</span> Interliga <span class="nav-code">INT</span>
+    </a>
+    <a class="nav-item" onclick="showSection('arb')" href="#">
+      <span class="nav-icon">🏁</span> Arbitraje <span class="nav-code">ARB</span>
+    </a>
+    <a class="nav-item" onclick="showSection('med')" href="#">
+      <span class="nav-icon">💜</span> Mediación <span class="nav-code">MED</span>
+    </a>
+    <a class="nav-item" onclick="showSection('tes')" href="#">
+      <span class="nav-icon">💰</span> Tesorería <span class="nav-code">TES</span>
+    </a>
+    <a class="nav-item" onclick="showSection('pap')" href="#">
+      <span class="nav-icon">📋</span> Papelajos <span class="nav-code">PAP</span>
+    </a>
+    <a class="nav-item" onclick="showSection('bie')" href="#">
+      <span class="nav-icon">⭐</span> Bienvenida <span class="nav-code">BIE</span>
+    </a>
+    <a class="nav-item" onclick="showSection('eve')" href="#">
+      <span class="nav-icon">🎉</span> Eventos <span class="nav-code">EVE</span>
+    </a>
+    <a class="nav-item" onclick="showSection('mer')" href="#">
+      <span class="nav-icon">👕</span> Merch <span class="nav-code">MER</span>
+    </a>
+    <a class="nav-item" onclick="showSection('red')" href="#">
+      <span class="nav-icon">📱</span> Redes Sociales <span class="nav-code">RED</span>
+    </a>
+    <a class="nav-item" onclick="showSection('bec')" href="#">
+      <span class="nav-icon">🎓</span> Becas y Ayudas <span class="nav-code">BEC</span>
+    </a>
+    <a class="nav-item" onclick="showSection('gen')" href="#">
+      <span class="nav-icon">⚙️</span> Normas Generales <span class="nav-code">GEN</span>
+    </a>
+  </aside>
+
+  <main>
+
+    <!-- ====== HOME ====== -->
+    <div class="section active" id="section-home">
+      <div class="intro-box">
+        <h2>Reglamento Interno de Comités</h2>
+        <p>Esta wiki recoge los acuerdos vigentes de la Asamblea General organizados por comité. Versión consolidada a <strong>mayo de 2026</strong>. Este documento es de solo lectura.</p>
+      </div>
+
+      <div class="home-grid">
+        <div class="home-card" onclick="showSection('ent')">
+          <span class="card-icon">🛼</span>
+          <div><div class="card-title">Entrenamientos</div><div class="card-desc">Asistencia mínima, tipos de partidos, comunicación de lines</div></div>
+        </div>
+        <div class="home-card" onclick="showSection('int')">
+          <span class="card-icon">🤝</span>
+          <div><div class="card-title">Interliga</div><div class="card-desc">Partidos, afterparties, relación con ARDE, patrocinios</div></div>
+        </div>
+        <div class="home-card" onclick="showSection('arb')">
+          <span class="card-icon">🏁</span>
+          <div><div class="card-title">Arbitraje</div><div class="card-desc">Refs, NSOs, estadísticas, coordinación con interliga</div></div>
+        </div>
+        <div class="home-card" onclick="showSection('med')">
+          <span class="card-icon">💜</span>
+          <div><div class="card-title">Mediación</div><div class="card-desc">Conflictos internos y relación con la comunidad derby</div></div>
+        </div>
+        <div class="home-card" onclick="showSection('tes')">
+          <span class="card-icon">💰</span>
+          <div><div class="card-title">Tesorería</div><div class="card-desc">Cuotas, cuentas, condonación por merch</div></div>
+        </div>
+        <div class="home-card" onclick="showSection('pap')">
+          <span class="card-icon">📋</span>
+          <div><div class="card-title">Papelajos</div><div class="card-desc">Actas, convocatorias, comunicaciones internas</div></div>
+        </div>
+        <div class="home-card" onclick="showSection('bie')">
+          <span class="card-icon">⭐</span>
+          <div><div class="card-title">Bienvenida</div><div class="card-desc">Reclutamiento, guaxes, jornadas de incorporación</div></div>
+        </div>
+        <div class="home-card" onclick="showSection('eve')">
+          <span class="card-icon">🎉</span>
+          <div><div class="card-title">Eventos</div><div class="card-desc">Afterparties, tercer tiempo, actividades sociales</div></div>
+        </div>
+        <div class="home-card" onclick="showSection('mer')">
+          <span class="card-icon">👕</span>
+          <div><div class="card-title">Merch</div><div class="card-desc">Diseño, pedidos, camisetas, política de IA</div></div>
+        </div>
+        <div class="home-card" onclick="showSection('red')">
+          <span class="card-icon">📱</span>
+          <div><div class="card-title">Redes Sociales</div><div class="card-desc">Instagram, TikTok, publicaciones, posicionamiento</div></div>
+        </div>
+        <div class="home-card" onclick="showSection('bec')">
+          <span class="card-icon">🎓</span>
+          <div><div class="card-title">Becas y Ayudas</div><div class="card-desc">Ayudas económicas para desplazamientos</div></div>
+        </div>
+        <div class="home-card" onclick="showSection('gen')">
+          <span class="card-icon">⚙️</span>
+          <div><div class="card-title">Normas Generales</div><div class="card-desc">Rotación de comités, IA, protección de datos, WhatsApp</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== ENTRENAMIENTOS ====== -->
+    <div class="section" id="section-ent">
+      <div class="section-header">
+        <div class="section-eyebrow">Comité · ENT</div>
+        <h1 class="section-title">Entrenamientos</h1>
+        <div class="section-meta">
+          <span>👥 7 personas (Raquel, Ly, Freexuelín, Nerea, Reiki, Tsuci, Alba)</span>
+          <span>📅 Última revisión: mayo 2026</span>
+        </div>
+      </div>
+
+      <h2 class="block-h2">Descripción</h2>
+      <div class="block block-p"><div class="block-content">El Comité de Entrenamientos diseña, planifica e imparte los entrenamientos del equipo. Es el único comité con carácter permanente según los estatutos (Art. 27) y no puede disolverse. Además de organizar los entrenamientos, decide las alineaciones (lines) para los partidos, eligiendo qué personas juegan en qué posición y cuánto tiempo.</div></div>
+      <div class="block block-p"><div class="block-content">El comité maneja simultáneamente: asistencia de cada jugadora, niveles de habilidad, posiciones (jammer o blocker), estado físico, y los acuerdos de asamblea sobre criterios de participación.</div></div>
+
+      <h3 class="block-h3">Principales retos históricos</h3>
+      <div class="block block-bullet"><div class="block-content">Gestión de la diversidad de niveles: la incorporación continua de guaxes genera una brecha de nivel que hace difícil diseñar lines que sean justos, seguros y competitivamente viables a la vez.</div></div>
+      <div class="block block-bullet"><div class="block-content">Presión y desgaste del comité: históricamente recibe críticas frecuentes sobre las decisiones de alineación, lo que genera desgaste emocional en sus integrantes.</div></div>
+      <div class="block block-bullet"><div class="block-content">Normas contradictorias: los acuerdos sobre partidos competitivos vs no competitivos han generado en ocasiones directrices difíciles de compaginar.</div></div>
+      <div class="block block-bullet"><div class="block-content">Comunicación de lines: hasta 2025 los lines se comunicaban sin explicación previa, generando frustración entre quienes no entendían los criterios.</div></div>
+
+      <h2 class="block-h2">Código de Normas Vigentes</h2>
+
+      <h3 class="block-h3">Sección A — Asistencia a Entrenamientos</h3>
+
+      <div class="article-card">
+        <div class="article-header">
+          <span class="article-code">ENT-A1</span>
+          <span class="article-date">Adoptado: sep. 2022 · Modificado: ene. 2024, oct. 2024</span>
+        </div>
+        <div class="article-body">
+          <div class="block block-p"><div class="block-content">Para tener preferencia para entrar en el roster de un partido, una jugadora debe cumplir simultáneamente dos condiciones:</div></div>
+          <div class="block block-bullet"><div class="block-content">Haber asistido al 50% o más de las 8 semanas inmediatamente anteriores al partido.</div></div>
+          <div class="block block-bullet"><div class="block-content">Haber asistido al 50% o más de las 4 semanas inmediatamente anteriores al partido.</div></div>
+          <div class="block block-p"><div class="block-content">Para el cálculo se contabiliza el mismo número de miércoles que de domingos.</div></div>
+          <div class="note-box warning">
+            <strong>⚠️ Importante:</strong> Cumplir el mínimo da preferencia pero no garantiza el puesto. No cumplirlo tampoco excluye automáticamente: el comité puede decidir que una persona sin el mínimo juegue si hay hueco, valorando estado físico, conocimiento de estrategia y necesidades del equipo.
+          </div>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-header">
+          <span class="article-code">ENT-A2</span>
+          <span class="article-date">Adoptado: oct. 2024</span>
+        </div>
+        <div class="article-body">
+          <div class="block block-p"><div class="block-content">Para no tener que repetir el examen de mínimas en una nueva temporada, la jugadora debe haber alcanzado un porcentaje de asistencia anual del 25% como mínimo.</div></div>
+          <div class="note-box derogada">
+            <strong>⛔ Norma anterior derogada:</strong> Antes de oct. 2024 el umbral era del 10%. Aumentado al 25% por acuerdo de la asamblea de octubre de 2024.
+          </div>
+        </div>
+      </div>
+
+      <h3 class="block-h3">Sección B — Tipos de Partidos y Participación</h3>
+
+      <div class="article-card">
+        <div class="article-header">
+          <span class="article-code">ENT-B1</span>
+          <span class="article-date">Adoptado: jun. 2025</span>
+        </div>
+        <div class="article-body">
+          <div class="block block-p"><div class="block-content">Se considera partido competitivo todo aquel cuyo resultado se suba a Flat Track Stats (FTS). El resto de partidos y scrimmages son no competitivos.</div></div>
+          <div class="note-box derogada">
+            <strong>⛔ Derogado (sep. 2025):</strong> La clasificación de jugadoras como "competitivas" o "no competitivas" (acuerdo extraordinaria sep. 2023) fue eliminada por unanimidad. Ahora son los partidos, no las personas, los que se clasifican.
+          </div>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-header">
+          <span class="article-code">ENT-B2</span>
+          <span class="article-date">Adoptado: sep. 2025</span>
+        </div>
+        <div class="article-body">
+          <div class="block block-p"><div class="block-content">En partidos competitivos, el banquillo decide los lines buscando tanto la viabilidad competitiva como la comodidad y seguridad de las jugadoras. Si se pide a una jugadora que descanse, se le proporcionará una explicación.</div></div>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-header">
+          <span class="article-code">ENT-B3</span>
+          <span class="article-date">Adoptado: sep. 2025</span>
+        </div>
+        <div class="article-body">
+          <div class="block block-p"><div class="block-content">En partidos no competitivos, se dará prioridad de participación a quienes hayan jugado menos minutos en partidos anteriores, sin excluir la participación del resto. Los lines serán lo más igualitarios posible en tiempo de juego, siempre garantizando la seguridad en pista.</div></div>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-header">
+          <span class="article-code">ENT-B4</span>
+          <span class="article-date">Adoptado: sep. 2025</span>
+        </div>
+        <div class="article-body">
+          <div class="block block-p"><div class="block-content">Se registrarán y conservarán estadísticas de partidos tanto competitivos como no competitivos, para poder evaluar el tiempo de juego de cada jugadora y organizar mejor los criterios de participación.</div></div>
+        </div>
+      </div>
+
+      <h3 class="block-h3">Sección C — Comunicación y Preparación de Partidos</h3>
+
+      <div class="article-card">
+        <div class="article-header">
+          <span class="article-code">ENT-C1</span>
+          <span class="article-date">Adoptado: jun. 2025</span>
+        </div>
+        <div class="article-body">
+          <div class="block block-p"><div class="block-content">En todos los entrenamientos pre-partido se reservará un tiempo específico para reunirse y comentar colectivamente los objetivos del partido y los lines de forma detallada, para que todas las jugadoras vayan al partido con expectativas reales.</div></div>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-header">
+          <span class="article-code">ENT-C2</span>
+          <span class="article-date">Adoptado: sep. 2025</span>
+        </div>
+        <div class="article-body">
+          <div class="block block-p"><div class="block-content">La preparación de partidos (objetivos, lines, roles) es un punto fijo en la agenda de las asambleas ordinarias previas a cada partido.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== INTERLIGA ====== -->
+    <div class="section" id="section-int">
+      <div class="section-header">
+        <div class="section-eyebrow">Comité · INT</div>
+        <h1 class="section-title">Interliga</h1>
+        <div class="section-meta">
+          <span>👥 Leia, MartitaSea, Sandra, Tamara</span>
+          <span>📅 Última revisión: mayo 2026</span>
+        </div>
+      </div>
+
+      <h2 class="block-h2">Descripción</h2>
+      <div class="block block-p"><div class="block-content">El Comité de Interliga acuerda y organiza los partidos con otros equipos de roller derby. Es el canal de comunicación habitual con ARDE (Asociación de Roller Derby de España). Gestiona la agenda de partidos, negocia condiciones y fechas con otros equipos, y coordina la participación en campeonatos.</div></div>
+
+      <h2 class="block-h2">Código de Normas Vigentes</h2>
+
+      <h3 class="block-h3">Sección A — Patrocinios y Subvenciones</h3>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">INT-A1</span><span class="article-date">Confirmado: abr. 2026</span></div>
+        <div class="article-body">
+          <div class="block block-p"><div class="block-content">El equipo no acepta patrocinios comerciales que impliquen llevar marcas en la equipación, instalar vallas publicitarias u otorgar visibilidad comercial a cambio de dinero. Sí es compatible la solicitud de subvenciones públicas (como la del Ayuntamiento de Bimenes).</div></div>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">INT-A2</span><span class="article-date">Adoptado: jun. 2025</span></div>
+        <div class="article-body">
+          <div class="block block-p"><div class="block-content">El equipo no se integra en la RFEP ni participará en sus campeonatos. La Güestia participa exclusivamente en la estructura de ARDE y sus campeonatos.</div></div>
+        </div>
+      </div>
+
+      <h3 class="block-h3">Sección B — Organización de Partidos y Afterparty</h3>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">INT-B1</span><span class="article-date">Adoptado: feb. 2025</span></div>
+        <div class="article-body">
+          <div class="block block-p"><div class="block-content">Cuando un equipo visitante juegue en casa, se ofrecerán dos opciones de afterparty: la cena o fiesta habitual, y una alternativa más accesible (cervezas/picoteo en Bimenes) para personas que vienen con familia o no quieren gastar mucho.</div></div>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">INT-B2</span><span class="article-date">Adoptado: abr. 2025</span></div>
+        <div class="article-body">
+          <div class="block block-p"><div class="block-content">El equipo no organiza eventos ni afterparties en locales donde conste la existencia de conflictos laborales o abusos. Esta norma se aplica con carácter general y se actualiza según la información disponible.</div></div>
+          <div class="note-box warning"><strong>Aplicación actual:</strong> El Manglar (Oviedo) está excluido expresamente desde abril 2025. Para Les Cigarreres se decidió evitarlo mientras se recaban más datos.</div>
+        </div>
+      </div>
+
+      <h3 class="block-h3">Sección C — Árbitres y NSOs</h3>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">INT-C1</span><span class="article-date">Adoptado: may. 2025</span></div>
+        <div class="article-body">
+          <div class="block block-p"><div class="block-content">El equipo reconoce la importancia de les árbitres y NSOs. Como práctica habitual, se cubrirán los gastos de alojamiento y desplazamiento de les árbitres cuando sea posible, reconociendo la misma necesidad para les NSOs.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== ARBITRAJE ====== -->
+    <div class="section" id="section-arb">
+      <div class="section-header">
+        <div class="section-eyebrow">Comité · ARB</div>
+        <h1 class="section-title">Arbitraje</h1>
+        <div class="section-meta">
+          <span>👥 Almu, Marte, Tanuki, Patri, Layna</span>
+          <span>📅 Última revisión: marzo 2026</span>
+        </div>
+      </div>
+      <h2 class="block-h2">Descripción</h2>
+      <div class="block block-p"><div class="block-content">El Comité de Arbitraje gestiona todo lo relacionado con árbitres (refs) y oficiales no patinadores (NSOs). Busca refs y NSOs para los partidos, gestiona los pagos por desplazamiento con tesorería, y corrige y comparte las estadísticas tras cada partido en casa.</div></div>
+      <div class="note-box pending"><strong>🔄 Pendiente (fin de temporada 2025-2026):</strong> La asamblea debatirá la posible fusión de los comités Arbitraje e Interliga.</div>
+      <h2 class="block-h2">Código de Normas Vigentes</h2>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">ARB-1</span><span class="article-date">Adoptado: mar. 2026</span></div>
+        <div class="article-body">
+          <div class="block block-p"><div class="block-content">El Comité de Arbitraje es responsable de:</div></div>
+          <div class="block block-bullet"><div class="block-content">Buscar refs y NSOs para todos los partidos, tanto en casa como fuera.</div></div>
+          <div class="block block-bullet"><div class="block-content">Gestionar los pagos por desplazamiento de refs en coordinación con tesorería.</div></div>
+          <div class="block block-bullet"><div class="block-content">Corregir y compartir las estadísticas del partido tras cada encuentro en casa.</div></div>
+          <div class="block block-bullet"><div class="block-content">Mantener activo el acceso al correo del comité con periodicidad regular.</div></div>
+          <div class="block block-bullet"><div class="block-content">Tener presencia en el grupo de coordinadora a través de una persona representante.</div></div>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">ARB-2</span><span class="article-date">Adoptado: mar. 2026</span></div>
+        <div class="article-body">
+          <div class="block block-p"><div class="block-content">El Comité de Arbitraje y el Comité de Interliga designarán cada uno una persona de enlace para mantener comunicación fluida y con suficiente antelación sobre las necesidades de árbitres en cada partido.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== MEDIACIÓN ====== -->
+    <div class="section" id="section-med">
+      <div class="section-header">
+        <div class="section-eyebrow">Comité · MED</div>
+        <h1 class="section-title">Mediación</h1>
+        <div class="section-meta"><span>👥 Esther, Motomari, Alebrixe</span><span>📅 Última revisión: marzo 2026</span></div>
+      </div>
+      <h2 class="block-h2">Descripción</h2>
+      <div class="block block-p"><div class="block-content">El Comité de Mediación gestiona los conflictos interpersonales dentro del equipo y entre el equipo y personas o equipos externos. Actúa como enlace con el comité de mediación de ARDE cuando hay casos que afectan a la comunidad nacional.</div></div>
+      <h2 class="block-h2">Código de Normas Vigentes</h2>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">MED-1</span><span class="article-date">Acuerdo continuado</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">El Comité de Mediación es el canal oficial para gestionar conflictos interpersonales dentro del equipo. Cualquier jugadora puede acudir a él en caso de conflicto.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">MED-2</span><span class="article-date">Adoptado: abr. 2025</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">El equipo no organiza eventos ni actividades en locales con conflictos laborales conocidos (articulado conjuntamente con el Comité de Interliga, ver INT-B2).</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">MED-3</span><span class="article-date">Adoptado: abr. 2025</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">En mediaciones con ARDE, la posición del equipo es que las ligas tienen responsabilidad sobre el comportamiento de sus jugadoras y deben emprender acciones restaurativas.</div></div></div>
+      </div>
+    </div>
+
+    <!-- ====== TESORERÍA ====== -->
+    <div class="section" id="section-tes">
+      <div class="section-header">
+        <div class="section-eyebrow">Comité · TES</div>
+        <h1 class="section-title">Tesorería</h1>
+        <div class="section-meta"><span>👥 Lydia, Albama</span><span>📅 Última revisión: febrero 2026</span></div>
+      </div>
+      <h2 class="block-h2">Descripción</h2>
+      <div class="block block-p"><div class="block-content">El Comité de Tesorería gestiona el dinero del equipo: recauda cuotas, paga gastos, lleva la contabilidad y comunica periódicamente el estado de cuentas a la asamblea.</div></div>
+      <h2 class="block-h2">Código de Normas Vigentes</h2>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">TES-1</span><span class="article-date">Adoptado: oct. 2021</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Toda jugadora en situación económica precaria puede solicitar la condonación de su cuota mensual a cambio de vender merch del equipo por valor equivalente a dos camisetas. Debe contactar con merch, que informará a tesorería. El mes se contabiliza como pagado y la jugadora mantiene todos sus derechos.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">TES-2</span><span class="article-date">Adoptado: sep. 2025</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">El Comité de Tesorería debe estar formado por al menos dos personas con acceso a la cuenta bancaria del equipo. Si no hay voluntarias suficientes, la asamblea realizará un sorteo.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">TES-3</span><span class="article-date">Adoptado: sep. 2025</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Tesorería revisará el pago de cuotas con periodicidad mensual y comunicará las incidencias a la asamblea.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">TES-4</span><span class="article-date">Adoptado: feb. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Tesorería comunicará periódicamente (via avisos) que las jugadoras con asuntos pendientes los gestionen directamente a través de laguestia.tesoreria@gmail.com.</div></div></div>
+      </div>
+    </div>
+
+    <!-- ====== PAPELAJOS ====== -->
+    <div class="section" id="section-pap">
+      <div class="section-header">
+        <div class="section-eyebrow">Comité · PAP</div>
+        <h1 class="section-title">Papelajos / Organización</h1>
+        <div class="section-meta"><span>👥 Valeria, Rayo</span><span>📅 Última revisión: febrero 2026</span></div>
+      </div>
+      <h2 class="block-h2">Descripción</h2>
+      <div class="block block-p"><div class="block-content">El Comité de Papelajos es el secretariado del equipo. Convoca las asambleas, prepara el orden del día, elabora y distribuye las actas. Custodia la documentación en el drive y gestiona el correo de información general.</div></div>
+      <h2 class="block-h2">Código de Normas Vigentes</h2>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">PAP-1</span><span class="article-date">Adoptado: ene. 2025</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Cada comité debe enviar al correo de info las credenciales de acceso a su correo y servicios, para asegurar la continuidad institucional y el archivo de papelajos.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">PAP-2</span><span class="article-date">Adoptado: oct. 2025</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Las administradoras del canal de Avisos de WhatsApp rotan junto con los cambios en la composición de la coordinadora.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">PAP-3</span><span class="article-date">Adoptado: oct. 2025</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">La comunidad de WhatsApp se mantendrá actualizada: limpieza periódica de personas inactivas, revisión de descripciones de grupos para eliminar contraseñas, y verificación de que el acceso a grupos de comité requiere permiso.</div></div></div>
+      </div>
+    </div>
+
+    <!-- ====== BIENVENIDA ====== -->
+    <div class="section" id="section-bie">
+      <div class="section-header">
+        <div class="section-eyebrow">Comité · BIE</div>
+        <h1 class="section-title">Bienvenida</h1>
+        <div class="section-meta"><span>👥 Bitxo, Layna, Llume</span><span>📅 Última revisión: octubre 2025</span></div>
+      </div>
+      <h2 class="block-h2">Descripción</h2>
+      <div class="block block-p"><div class="block-content">El Comité de Bienvenida recluta nuevas jugadoras y las recibe en las jornadas de bienvenida. Las nuevas incorporaciones se denominan guaxes o fresis: personas que aún no tienen el nivel mínimo de seguridad y fluidez en patines. Tras superar el examen de mínimas, pasan a ser veteranas y pueden jugar partidos.</div></div>
+      <h2 class="block-h2">Código de Normas Vigentes</h2>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">BIE-1</span><span class="article-date">Adoptado: sep. 2024</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">El Comité de Bienvenida es responsable de los entrenamientos de los martes durante el periodo de incorporación de nuevas guaxes. Tiene acceso a la aplicación de gestión de entrenamientos y organiza los exámenes de mínimas.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">BIE-2</span><span class="article-date">Adoptado: jun. 2025</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">El finde de bienvenida para nuevas guaxes se celebrará, por norma general, en el tercer fin de semana de septiembre de cada temporada.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">BIE-3</span><span class="article-date">Adoptado: jun. 2025</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Para cada campaña de reclutamiento, el comité publicará en redes sociales y buscará presencia en el entorno de Bimenes y alrededores, coordinándose con redes para publicar con suficiente antelación.</div></div></div>
+      </div>
+    </div>
+
+    <!-- ====== EVENTOS ====== -->
+    <div class="section" id="section-eve">
+      <div class="section-header">
+        <div class="section-eyebrow">Comité · EVE</div>
+        <h1 class="section-title">Eventos</h1>
+        <div class="section-meta"><span>👥 Isa, Zahara, Henar, Anna, Rosa, Ali, Paula Bultos, Ana Katana, Ana Valerio</span><span>📅 Última revisión: abril 2025</span></div>
+      </div>
+      <h2 class="block-h2">Descripción</h2>
+      <div class="block block-p"><div class="block-content">El Comité de Eventos organiza las actividades sociales relacionadas con partidos: afterparties, tercer tiempo, y logística de tentempié para los partidos. También gestiona otros eventos del equipo como comidas, fiestas y actividades de recaudación.</div></div>
+      <h2 class="block-h2">Código de Normas Vigentes</h2>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">EVE-1</span><span class="article-date">Adoptado: feb. 2025</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Cuando se organice un afterparty con equipo visitante, se ofrecerán siempre dos opciones: la propuesta habitual de cena o fiesta, y una alternativa más accesible (cervezas o picoteo en Bimenes) para que todas las personas puedan participar.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">EVE-2</span><span class="article-date">Adoptado: abr. 2025</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">El equipo no organiza eventos ni afterparties en locales donde conste la existencia de conflictos laborales o abusos. El Manglar (Oviedo) está excluido expresamente desde abril 2025.</div></div></div>
+      </div>
+    </div>
+
+    <!-- ====== MERCH ====== -->
+    <div class="section" id="section-mer">
+      <div class="section-header">
+        <div class="section-eyebrow">Comité · MER</div>
+        <h1 class="section-title">Merch</h1>
+        <div class="section-meta"><span>👥 Helen, Stella, Carolina, Diana, Manuela</span><span>📅 Última revisión: abril 2026</span></div>
+      </div>
+      <h2 class="block-h2">Descripción</h2>
+      <div class="block block-p"><div class="block-content">El Comité de Merch diseña, encarga y vende el merchandising del equipo como fuente de ingresos. También gestiona el mecanismo de condonación de cuota mediante venta de merch para jugadoras en dificultad económica.</div></div>
+      <h2 class="block-h2">Código de Normas Vigentes</h2>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">MER-1</span><span class="article-date">Adoptado: mar. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">El Comité de Merch puede renovar pedidos de productos habituales sin aprobación previa de coordinadora. Para novedades, cambios de diseño o productos nuevos, sí se requiere aprobación.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">MER-2</span><span class="article-date">Confirmado: abr. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">No se realizarán cambios en las camisetas del equipo motivados por patrocinios o acuerdos comerciales.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">MER-3</span><span class="article-date">Adoptado: jun. 2025</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">El equipo no utiliza inteligencia artificial generativa para el diseño de imágenes, carteles ni merchandising.</div></div></div>
+      </div>
+    </div>
+
+    <!-- ====== REDES ====== -->
+    <div class="section" id="section-red">
+      <div class="section-header">
+        <div class="section-eyebrow">Comité · RED</div>
+        <h1 class="section-title">Redes Sociales</h1>
+        <div class="section-meta"><span>👥 Pale, Albus</span><span>📅 Última revisión: septiembre 2025</span></div>
+      </div>
+      <h2 class="block-h2">Descripción</h2>
+      <div class="block block-p"><div class="block-content">El Comité de Redes Sociales gestiona la presencia del equipo en Instagram y TikTok. Publica contenido sobre la actividad del equipo, reclutamiento, partidos y posicionamientos institucionales.</div></div>
+      <h2 class="block-h2">Código de Normas Vigentes</h2>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">RED-1</span><span class="article-date">Adoptado: sep. 2025</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">El equipo no publica de forma sistemática en grupos de tres imágenes. El formato de publicación queda a criterio del comité, que puede hacerlo ocasionalmente si lo considera oportuno.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">RED-2</span><span class="article-date">Adoptado: jun. 2025</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">El equipo se posiciona públicamente en redes sociales en contra del uso de inteligencia artificial generativa en el diseño dentro del roller derby.</div></div></div>
+      </div>
+    </div>
+
+    <!-- ====== BECAS ====== -->
+    <div class="section" id="section-bec">
+      <div class="section-header">
+        <div class="section-eyebrow">Comité · BEC</div>
+        <h1 class="section-title">Becas y Ayudas</h1>
+        <div class="section-meta"><span>👥 Cris, Hache, Mariana</span><span>📅 Última revisión: octubre 2025</span></div>
+      </div>
+      <h2 class="block-h2">Descripción</h2>
+      <div class="block block-p"><div class="block-content">El Comité de Becas y Ayudas gestiona las ayudas económicas del equipo para facilitar la participación en partidos fuera de Asturias (desplazamiento, alojamiento). Gestiona un fondo específico para esta finalidad.</div></div>
+      <h2 class="block-h2">Código de Normas Vigentes</h2>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">BEC-1</span><span class="article-date">Temporada en curso</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">El Comité de Becas y Ayudas gestiona de forma autónoma las solicitudes de ayuda económica para desplazamientos a partidos fuera de Asturias, dentro del presupuesto asignado por la asamblea.</div></div></div>
+      </div>
+    </div>
+
+    <!-- ====== NORMAS GENERALES ====== -->
+    <div class="section" id="section-gen">
+      <div class="section-header">
+        <div class="section-eyebrow">Normas transversales · GEN</div>
+        <h1 class="section-title">Normas Generales de Funcionamiento</h1>
+        <div class="section-meta"><span>📅 Última revisión: mayo 2026</span></div>
+      </div>
+
+      <h3 class="block-h3">Composición y Rotación</h3>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">GEN-1</span><span class="article-date">Estatutos / Confirmado jun. 2025</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Ningún comité puede estar formado por una única persona. Los comités deben tener como mínimo el número de personas definido en la asamblea de fin de temporada.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">GEN-2</span><span class="article-date">Estatutos / Confirmado jun. 2025</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">La pertenencia a los comités es periódica. Anualmente se renuevan las personas integrantes, con un mínimo de un mes de solapamiento entre salientes y entrantes. Las excepciones deben ser solicitadas por la propia persona y no pueden desplazar a nadie que quiera incorporarse.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">GEN-3</span><span class="article-date">Estatutos</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Cada comité designa una persona portavoz que pasa a formar parte de la coordinadora. Esta portavocía es rotatoria dentro del comité con una periodicidad de 4 meses.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">GEN-4</span><span class="article-date">Confirmado abr. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Si una persona está en un comité pero no puede comprometerse activamente, debe incorporarse a la bolsa de voluntarias. La participación en los comités requiere proactividad.</div></div></div>
+      </div>
+
+      <h3 class="block-h3">Uso de Inteligencia Artificial</h3>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">GEN-5</span><span class="article-date">Jun. 2025 / Ampliado abr. 2026</span></div>
+        <div class="article-body">
+          <div class="block block-p"><div class="block-content">El equipo limita el uso de IA generativa en su actividad (imágenes, diseño, y en general todos los ámbitos desde abril 2026). Cada persona puede hacer lo que quiera a título individual, pero como equipo se aplica esta limitación.</div></div>
+          <div class="note-box info"><strong>Excepción aprobada (feb. 2026):</strong> Se permite el uso de herramientas de IA no generativa para búsqueda y organización de información interna. No se aplica a creación de contenido.</div>
+        </div>
+      </div>
+
+      <h3 class="block-h3">Protección de Datos</h3>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">GEN-6</span><span class="article-date">Feb. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">El Excel de datos del equipo está accesible a todos los comités. Dado el volumen de personas con acceso, es fundamental cuidar el uso y compartición de datos privados de las jugadoras.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">GEN-7</span><span class="article-date">Feb. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Si una jugadora se ausenta, desaparece o deja de pagar cuota, se esperará al final de cada temporada para preguntar si sigue interesada. Si no, se eliminan sus datos y se la retira de grupos y correos (tarea de papelajos). El número y nombre se conservan 10 años desde el último año en que jugó.</div></div></div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    document.getElementById('section-' + id).classList.add('active');
+    document.querySelectorAll('.nav-item').forEach(item => {
+      if (item.getAttribute('onclick')?.includes("'" + id + "'")) item.classList.add('active');
+    });
+    window.scrollTo(0, 0);
+  }
+</script>
+</body>
+</html>
