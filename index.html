@@ -1428,5 +1428,247 @@
     window.scrollTo(0, 0);
   }
 </script>
+<!-- ============================================================
+  PEGAR ESTE BLOQUE justo antes de </body> (después del <script> que ya existe)
+  Hace 3 cosas: 1) buscador  2) quita las personas de cada comité
+  3) reordena cada comité: funciones y normas arriba, histórico por año en desplegables
+============================================================ -->
+<script>
+(function () {
+  /* ---------- Estilos nuevos ---------- */
+  var css = `
+  #search{width:280px;max-width:40vw;padding:7px 14px;border-radius:20px;border:1px solid rgba(167,139,250,.4);
+    background:rgba(255,255,255,.12);color:#fff;font:inherit;font-size:14px;outline:none}
+  #search::placeholder{color:rgba(255,255,255,.6)}
+  #search:focus{background:rgba(255,255,255,.2);border-color:var(--purple-mid)}
+  details.year{background:#fff;border:1px solid var(--gray-200);border-radius:10px;margin:10px 0;overflow:hidden}
+  details.year>summary{cursor:pointer;list-style:none;padding:12px 18px;font-weight:600;color:var(--purple-dark);
+    display:flex;align-items:center;gap:10px;background:var(--gray-50);user-select:none}
+  details.year>summary::-webkit-details-marker{display:none}
+  details.year>summary::before{content:"▸";color:var(--purple);transition:transform .15s}
+  details.year[open]>summary::before{transform:rotate(90deg)}
+  details.year[open]>summary{border-bottom:1px solid var(--gray-200)}
+  details.year .y-count{margin-left:auto;font-size:11px;font-weight:500;color:var(--gray-500);
+    background:var(--gray-100);padding:2px 9px;border-radius:12px}
+  details.year .year-body{padding:6px 18px 14px}
+  .hist-controls{display:flex;gap:8px;margin:0 0 12px}
+  .hist-controls button{font:inherit;font-size:12px;padding:4px 12px;border-radius:14px;cursor:pointer;
+    border:1px solid var(--purple-mid);background:#fff;color:var(--purple)}
+  .hist-controls button:hover{background:var(--purple-light)}
+  .sr-item{background:#fff;border:1px solid var(--gray-200);border-radius:10px;padding:12px 16px;margin:10px 0;cursor:pointer}
+  .sr-item:hover{border-color:var(--purple-mid);box-shadow:0 4px 16px rgba(124,58,237,.1)}
+  .sr-top{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12px;margin-bottom:6px}
+  .sr-sec{font-weight:600;color:var(--purple-dark)}
+  .sr-label{font-family:monospace;color:var(--gray-600)}
+  .sr-kind{margin-left:auto;background:var(--purple-light);color:var(--purple);padding:1px 9px;border-radius:10px;font-weight:600}
+  .sr-snip{font-size:14px;color:var(--gray-700);line-height:1.6}
+  mark{background:var(--gold-light);color:inherit;border-radius:3px;padding:0 2px}
+  .flash{animation:flash 2.4s ease-out;border-radius:6px}
+  @keyframes flash{0%,55%{background:#FDE68A}100%{background:transparent}}
+  @media(max-width:768px){#search{width:160px;max-width:none}}
+  `;
+  var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
+
+  /* ---------- Utilidades ---------- */
+  function mk(tag, cls, html) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (html != null) e.innerHTML = html;
+    return e;
+  }
+  function esc(s) {
+    return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; });
+  }
+
+  /* ---------- 2. Quitar quién está en cada comité ---------- */
+  document.querySelectorAll('.section-meta span').forEach(function (s) {
+    if (s.textContent.indexOf('👥') !== -1) s.remove();
+  });
+
+  /* ---------- 3. Reorganizar cada comité ---------- */
+  document.querySelectorAll('main > .section').forEach(function (sec) {
+    if (sec.id === 'section-home') return;
+    var kids = Array.from(sec.children);
+    var header = kids.find(function (k) { return k.classList.contains('section-header'); });
+    var body = kids.filter(function (k) { return k !== header; });
+
+    var iHist = body.findIndex(function (k) { return k.matches('h2.block-h2') && /Historial/i.test(k.textContent); });
+    var iNorm = body.findIndex(function (k) { return k.matches('h2.block-h2') && /Código de Normas/i.test(k.textContent); });
+    if (iNorm < 0) { // p. ej. Normas Generales: las normas empiezan en el primer h3 seguido de una ficha
+      iNorm = body.findIndex(function (k, i) {
+        return k.matches('h3.block-h3') && body[i + 1] && body[i + 1].classList.contains('article-card');
+      });
+    }
+    var end = body.length;
+    var hStart = iHist < 0 ? end : iHist;
+    var nStart = iNorm < 0 ? end : iNorm;
+
+    var intro = body.slice(0, Math.min(hStart, nStart));
+    var hist = iHist < 0 ? [] : body.slice(hStart + 1, nStart);
+    var norms = body.slice(nStart);
+    if (norms.length && norms[0].matches('h2.block-h2')) norms.shift();
+    if (intro.length && intro[0].matches('h2.block-h2')) intro.shift();
+
+    // "Principales retos históricos" (Entrenamientos) pasa al histórico
+    var retos = [];
+    var iR = intro.findIndex(function (k) { return k.matches('h3.block-h3') && /retos hist/i.test(k.textContent); });
+    if (iR >= 0) retos = intro.splice(iR);
+
+    sec.replaceChildren(header);
+
+    if (intro.length) {
+      sec.append(mk('h2', 'block-h2', 'Funciones y tareas'));
+      intro.forEach(function (n) { sec.append(n); });
+    }
+    if (norms.length) {
+      sec.append(mk('h2', 'block-h2', 'Normas vigentes'));
+      norms.forEach(function (n) { sec.append(n); });
+    }
+
+    // Grupos del histórico
+    var groups = [], cur = null;
+    if (retos.length) groups.push({ title: 'Principales retos históricos', nodes: retos.slice(1) });
+    hist.forEach(function (n) {
+      if (n.matches('h3.block-h3')) { cur = { title: n.textContent.trim(), nodes: [] }; groups.push(cur); }
+      else { if (!cur) { cur = { title: 'General', nodes: [] }; groups.push(cur); } cur.nodes.push(n); }
+    });
+
+    if (groups.length) {
+      sec.append(mk('h2', 'block-h2', 'Histórico de acuerdos'));
+      var ctr = mk('div', 'hist-controls');
+      var bOpen = mk('button', null, 'Expandir todo');
+      var bClose = mk('button', null, 'Contraer todo');
+      bOpen.type = bClose.type = 'button';
+      bOpen.onclick = function () { sec.querySelectorAll('details.year').forEach(function (d) { d.open = true; }); };
+      bClose.onclick = function () { sec.querySelectorAll('details.year').forEach(function (d) { d.open = false; }); };
+      ctr.append(bOpen, bClose);
+      sec.append(ctr);
+      groups.forEach(function (g) {
+        var d = mk('details', 'year');
+        var sm = mk('summary');
+        var t = mk('span'); t.textContent = g.title;
+        var c = mk('span', 'y-count');
+        var n = g.nodes.filter(function (x) { return x.classList.contains('block-bullet'); }).length;
+        c.textContent = n + (n === 1 ? ' acuerdo' : ' acuerdos');
+        sm.append(t, c);
+        var bd = mk('div', 'year-body');
+        g.nodes.forEach(function (x) { bd.append(x); });
+        d.append(sm, bd);
+        sec.append(d);
+      });
+    }
+  });
+
+  /* ---------- 1. Buscador ---------- */
+  var main = document.querySelector('main');
+  var panel = mk('div', 'section'); panel.id = 'section-search'; main.append(panel);
+
+  var input = mk('input'); input.id = 'search'; input.type = 'search'; input.autocomplete = 'off';
+  input.placeholder = 'Buscar en la normativa…  ( / )';
+  document.querySelector('header .logo').after(input);
+
+  function norm(s) {
+    return Array.from(s).map(function (c) {
+      var n = c.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      return (n.length === c.length ? n : c).toLowerCase();
+    }).join('');
+  }
+
+  var items = [];
+  document.querySelectorAll('main > .section').forEach(function (sec) {
+    if (sec.id === 'section-home' || sec.id === 'section-search') return;
+    var secName = sec.querySelector('.section-title').textContent.trim();
+    var m = sec.querySelector('.section-eyebrow').textContent.match(/·\s*(\w+)/);
+    var code = m ? m[1] : '';
+    sec.querySelectorAll('.article-card, .block-bullet, .block-p, .note-box').forEach(function (el) {
+      var card = el.closest('.article-card');
+      if (card && card !== el) return;
+      var det = el.closest('details');
+      var kind, label;
+      if (card) { kind = 'Norma'; label = card.querySelector('.article-code').textContent.trim(); }
+      else if (det) { kind = 'Histórico'; label = det.querySelector('summary span').textContent.trim(); }
+      else { kind = 'Funciones'; label = 'Funciones y tareas'; }
+      var text = el.textContent.replace(/\s+/g, ' ').trim();
+      if (!text) return;
+      items.push({ el: el, id: sec.id.replace('section-', ''), sec: secName, code: code,
+                   kind: kind, label: label, text: text, n: norm(text) });
+    });
+  });
+
+  var lastId = 'home';
+  var origShow = window.showSection;
+  window.showSection = function (id) {
+    lastId = id;
+    panel.classList.remove('active');
+    origShow(id);
+  };
+
+  function snippet(it, terms) {
+    var t = it.text, n = it.n;
+    var pos = n.indexOf(terms[0]); if (pos < 0) pos = 0;
+    var s = Math.max(0, pos - 70), e = Math.min(t.length, pos + 190);
+    var ns = n.slice(s, e), ts = t.slice(s, e), ranges = [];
+    terms.forEach(function (term) {
+      var i = ns.indexOf(term);
+      while (i >= 0) { ranges.push([i, i + term.length]); i = ns.indexOf(term, i + term.length); }
+    });
+    ranges.sort(function (a, b) { return a[0] - b[0]; });
+    var out = '', last = 0;
+    ranges.forEach(function (r) {
+      if (r[0] < last) return;
+      out += esc(ts.slice(last, r[0])) + '<mark>' + esc(ts.slice(r[0], r[1])) + '</mark>';
+      last = r[1];
+    });
+    out += esc(ts.slice(last));
+    return (s > 0 ? '… ' : '') + out + (e < t.length ? ' …' : '');
+  }
+
+  var shown = [];
+  function run() {
+    var q = input.value.trim();
+    if (q.length < 2) { if (panel.classList.contains('active')) window.showSection(lastId); return; }
+    var terms = norm(q).split(/\s+/).filter(Boolean);
+    var res = items.filter(function (it) { return terms.every(function (t) { return it.n.indexOf(t) !== -1; }); });
+    res.sort(function (a, b) { return (a.kind === 'Norma' ? 0 : 1) - (b.kind === 'Norma' ? 0 : 1); });
+    var total = res.length;
+    shown = res.slice(0, 80);
+    document.querySelectorAll('.section').forEach(function (s) { s.classList.remove('active'); });
+    panel.classList.add('active');
+    var html = '<div class="section-header"><div class="section-eyebrow">Buscador</div>' +
+      '<h1 class="section-title">Resultados</h1><div class="section-meta"><span>' + total +
+      (total === 1 ? ' resultado' : ' resultados') + ' para “' + esc(q) + '”' +
+      (total > 80 ? ' (se muestran los 80 primeros)' : '') + '</span></div></div>';
+    if (!total) html += '<p>No se ha encontrado nada. Prueba con otras palabras o menos términos.</p>';
+    shown.forEach(function (it, i) {
+      html += '<div class="sr-item" data-i="' + i + '"><div class="sr-top"><span class="sr-sec">' + esc(it.sec) +
+        '</span><span class="sr-label">' + esc(it.label) + '</span><span class="sr-kind">' + it.kind +
+        '</span></div><div class="sr-snip">' + snippet(it, terms) + '</div></div>';
+    });
+    panel.innerHTML = html;
+    window.scrollTo(0, 0);
+  }
+
+  panel.addEventListener('click', function (ev) {
+    var box = ev.target.closest('.sr-item'); if (!box) return;
+    var it = shown[+box.dataset.i];
+    window.showSection(it.id);
+    var d = it.el.closest('details'); if (d) d.open = true;
+    setTimeout(function () {
+      it.el.scrollIntoView({ block: 'center' });
+      it.el.classList.remove('flash'); void it.el.offsetWidth; it.el.classList.add('flash');
+    }, 40);
+  });
+
+  input.addEventListener('input', run);
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { input.value = ''; input.blur(); run(); }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === '/' && document.activeElement !== input && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) {
+      e.preventDefault(); input.focus();
+    }
+  });
+})();
+</script>
 </body>
 </html>
