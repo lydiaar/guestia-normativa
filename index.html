@@ -282,6 +282,13 @@
   aside::-webkit-scrollbar { width: 4px; }
   aside::-webkit-scrollbar-track { background: transparent; }
   aside::-webkit-scrollbar-thumb { background: var(--gray-200); border-radius: 4px; }
+  .aid-table{border-collapse:collapse;width:100%;margin:8px 0;font-size:14px;white-space:normal}
+  .aid-table th,.aid-table td{border:1px solid var(--gray-200);padding:6px 10px;text-align:center}
+  .aid-table th{background:var(--purple-light);color:var(--purple-dark)}
+  .back-btn{display:inline-flex;align-items:center;gap:6px;margin:0 0 18px;padding:7px 16px;border-radius:18px;border:1px solid var(--purple-mid);background:#fff;color:var(--purple);font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+  .back-btn:hover{background:var(--purple-light)}
+  .back-btn.bottom{margin:32px 0 0}
+  @media print{.back-btn{display:none}}
 </style>
 </head>
 <body>
@@ -343,7 +350,7 @@
     <div class="section active" id="section-home">
       <div class="intro-box">
         <h2>Reglamento Interno de Comités</h2>
-        <p>Esta wiki recoge los acuerdos vigentes de la Asamblea General organizados por comité. Versión consolidada a <strong>mayo de 2026</strong>. Este documento es de solo lectura.</p>
+        <p>Esta wiki recoge los acuerdos vigentes de la Asamblea General organizados por comité. Versión consolidada a <strong>noviembre de 2026</strong>. Este documento es de solo lectura.</p>
       </div>
 
       <div class="home-grid">
@@ -353,7 +360,7 @@
         </div>
         <div class="home-card" onclick="showSection('int')">
           <span class="card-icon">🤝</span>
-          <div><div class="card-title">Interliga</div><div class="card-desc">Partidos, afterparties, relación con ARDE, patrocinios</div></div>
+          <div><div class="card-title">Interliga</div><div class="card-desc">Comité fusionado con Arbitraje. Partidos, afterparties, relación con ARDE, patrocinios</div></div>
         </div>
         <div class="home-card" onclick="showSection('arb')">
           <span class="card-icon">🏁</span>
@@ -404,7 +411,7 @@
         <div class="section-eyebrow">Comité · ENT</div>
         <h1 class="section-title">Entrenamientos</h1>
         <div class="section-meta">
-          <span>📅 Última revisión: mayo 2026</span>
+          <span>📅 Última revisión: noviembre 2026</span>
         </div>
       </div>
 
@@ -422,7 +429,7 @@
 
       <h3 class="block-h3">2018 — Orígenes del comité</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Mayo 2018:</strong> Se crea el comité de entrenamientos, inicialmente llevado por Alba. Su función es gestionar los entrenamientos y la evolución de las jugadoras.</div></div>
-      <div class="block block-bullet"><div class="block-content"><strong>Julio 2018:</strong> Se establece el número mínimo de 4 jugadoras para que un entrenamiento sea "oficial" y no se cancele. Esto no impide que quien quiera ir lo haga; solo evita desplazamientos en vano para las que vienen de lejos.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Julio 2018:</strong> Se establece el número mínimo de 4 jugadoras para que un entrenamiento sea "oficial" y no se cancele (superado en jun. 2026: ya no hay mínimo, ver ENT-D1). Esto no impide que quien quiera ir lo haga; solo evita desplazamientos en vano para las que vienen de lejos.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2018:</strong> Se aprueba el modelo de dos campañas de reclutamiento anuales con cursos de iniciación de 3 meses, en lugar de admisión continua. Se decide frenar llamamientos en RRSS hasta superar las mínimas.</div></div>
 
       <h3 class="block-h3">2019 — Primeras normas de asistencia y estructura</h3>
@@ -454,7 +461,7 @@
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2021:</strong> Se aprueba que, mientras coincida el día de entrenamiento de freshies con el de veteranas, a la persona que se encarga del grupo de freshies ese domingo se le contabilice como asistencia al entrenamiento de veteranas.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2021:</strong> Se acuerdan los criterios de selección de roster cuando hay más jugadoras apuntadas que plazas disponibles: 1.º asistencia; 2.º prioridad a quienes no jugaron el último partido; 3.º en caso de empate, sorteo.</div></div>
 
-      <h3 class="block-h3">2022</h3>
+      <h3 class="block-h3">2022 — Asistencia, mínimas y calendario</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2022:</strong> Las pruebas de mínimas se fijan para el 1 y el 6 de febrero. La nueva jornada de puertas abiertas se hará después de las mínimas para no tener varios niveles de freshies a la vez.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2022:</strong> Se aprueba comprar un BOSU (de segunda mano; Amazon no). Se debate una propuesta de cambio de normas de asistencia: se saca la puntualidad de la propuesta (se detecta como problema aparte); si el roster está lleno, no se desplaza a nadie por quien solo viene a jugar; rotación solidaria, excepciones y asignación de posiciones quedan pendientes de una propuesta actualizada. Se intentará contratar a alguien externo para dinámicas de equipo (Nerea se ofrece si no).</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2022:</strong> Se explican los acuerdos de asistencia para jugar: 50% de los entrenamientos del mes anterior al partido y 50% de los realizados desde el último partido. El roster se envía unos 15 días antes, y esa es la fecha tope. Solo cuentan entrenamientos (no partidos ni entrenos de freshies que no coincidan con los de jugadoras). <em>(Los partidos pasan a contar como entrenamientos en sep. 2022.)</em> Se propone traer a jugadoras de nivel de la selección para entrenar tras el partido de Galiza (finde 2-3 de abril) y, si no, ir a entrenar a Bilbao con Botxo. Jornada de dinámicas de equipo con una psicóloga el 26-27 de marzo; no se anula ningún entrenamiento.</div></div>
@@ -465,7 +472,7 @@
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2022:</strong> Se acuerda que Interliga y Entrenamientos coordinen las fechas de los partidos del Nacional (hacen falta unos 8 entrenamientos de preparación).</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2022:</strong> Se considera mejor que la entrenadora esté fuera de la pista cada día, pero no siempre es posible; si hay pocas jugadoras, participa también, y se propone que haya dos entrenadoras que se turnen. No se ve bien recurrir a voluntarias para entrenar a jugadoras. Se rechaza entrenar en los días laborables de Navidad con asistencia positiva: se mantienen las vacaciones aprobadas y no se cuenta asistencia en ellas.</div></div>
 
-      <h3 class="block-h3">2023</h3>
+      <h3 class="block-h3">2023 — Sportsmember y los dos grupos</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2023:</strong> Se concreta el criterio de asistencia aprobado al inicio de temporada: hay que tener <strong>8 de los últimos 16 entrenamientos</strong> (50%) para jugar partidos. El comité decide ser estricto con la norma por la importancia de la continuidad (compenetración, menos lesiones, entrenos aprovechables) y porque llevaban dos meses sin scrimmages por falta de asistencia. Para el banquillo se propone a personas con experiencia y se pide a quienes quieran participar que vengan a preparar sus posiciones en los entrenos previos al partido. Bootcamp de freshies el 25 de febrero, simulacro de mínimas el 5 de marzo y examen el 23 de abril.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Abril 2023:</strong> Scrimmage con jugadoras de RDM B el sábado 15 y mínimas el domingo 16; se prepara un bootcamp de jammers.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Mayo 2023:</strong> Los avisos de entrenamientos pasan a gestionarse con Sportsmember (activar las notificaciones y apuntarse con tiempo, sin desapuntarse a última hora). Se propone un test de desempeño físico (Cooper trimestral y otras pruebas, con ficha de seguimiento) en línea con la hora semanal de deporte adicional del verano de 2022; se ve bien siempre que no se penalice a quien no pueda hacerlo y se pide un físico más duro en los entrenamientos. Fecha del teórico: martes 23 de mayo.</div></div>
@@ -475,7 +482,7 @@
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2023:</strong> Recordatorio: asistir a los entrenos sin patines, por el motivo que sea, también cuenta como asistencia.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2023:</strong> Se valora como positivo que las dudas sobre decisiones de banquillo se expresen por la vía regular (email), con el compromiso de que cada persona trabaje sus expectativas y entienda que las decisiones de banquillo no son personales. Se comenta volver a los lines anónimos y trabajar con les Guaxes la realidad del banquillo.</div></div>
 
-      <h3 class="block-h3">2024</h3>
+      <h3 class="block-h3">2024 — Asistencia para ARDE y reorganización con Bienvenida</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2024:</strong> Se aprueba recuperar el <strong>50% de asistencia en el mes previo a un partido de ARDE</strong>, para evitar ausencias de última hora en los entrenos de estrategia y lines. Esa asistencia sirve para fijar prioridades de roster; la decisión final, positiva o negativa, siempre es del comité de entrenamientos. <em>(Sustituye, para los partidos de ARDE, el criterio de los 16 entrenamientos de sep. 2022.)</em></div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2024:</strong> Se acepta la propuesta de banquillo de dedicar más tiempo e intensidad al derby (para hacer fondo, que el equipo llega agotado al final del primer tiempo), con algo de habilidad en el calentamiento. Las guaxas piden quedarse con el entrenamiento de los martes para usar solas la pista, y se acuerda un nuevo reclutamiento en marzo. Simulacro de mínimas el 12 de marzo y mínimas el 5 de mayo (con examinadoras externas).</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2024:</strong> Quien esté al límite de asistencia para el partido contra Barcelona puede jugar si asiste al entreno del miércoles. Se recuerda la potestad de banquillo para cambiar los lines según fluya el partido (bloquers y jammers), sin carácter personal, y que habrá una silla para «el petazo» como espacio de respiro. El entrenamiento de guaxes pasa de las 19:00 a las 21:00 o 21:30 si es posible. Se crea una bolsa de voluntaries para asistir en los entrenos de guaxes por la diferencia de niveles.</div></div>
@@ -484,16 +491,20 @@
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2024:</strong> Comunicación con Entrenamientos: la vía principal es su email (también Sportmember para bajas y motivos); a quien escriba personalmente se le redirige al correo. Se pide apuntarse y darse de baja con antelación. Se recuerdan los dos grupos de sep. 2023 y el físico externo mínimo de 2h. <em>(Derogado en sep. 2025: la clasificación pasa a los partidos.)</em> Se aprueba subir el <strong>porcentaje anual de asistencia mínimo para no repetir mínimas del 10% al 25%</strong>. Los martes son exclusivamente para guaxes y los miércoles para veteranas; solo en casos muy excepcionales se convalida un entreno de freshie por uno de veteranas, valorado por el comité. Protocolo de excepciones para el Grupo 1 de ARDE (asistencia suficiente para el partido anterior y compromiso en la temporada; fuerza mayor equivalente a unos 2 entrenos). Calendario de entrenos de guaxes con sustituta, con PDF de contenidos. Petos: una persona designada los lava cada domingo de asamblea. Tarea: actualizar el protocolo de repetición de mínimas con los nuevos porcentajes.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2024:</strong> Mínimas prácticas el domingo 15 de diciembre. Hasta entonces se proponen dos tipos de entrenos de guaxes (para quien se presenta y para quien no); con el número actual no hacen falta dos entrenadoras cada día.</div></div>
 
-      <h3 class="block-h3">2025</h3>
+      <h3 class="block-h3">2025 — Partidos competitivos y no competitivos</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2025:</strong> Se pide revisar, en futuras asambleas o en la de fin de temporada, el concepto de partido competitivo y no competitivo para que quede más claro en el equipo.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2025:</strong> Se decide por mayoría que <strong>todo lo que se suba a Flat Track Stats se considera competitivo</strong>; el resto, no. Se acuerda que en todos los entrenamientos pre-partido se reserve un tiempo para comentar los objetivos del partido y los lines de forma detallada. Se rechaza pasar los entrenos de los domingos a los sábados (0 a favor, 9 en contra, 5 abstenciones).</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2025:</strong> Se aprueba por unanimidad que <strong>los partidos, y no las personas, sean «competitivos» o «no competitivos»</strong>, porque en la práctica ya se ignoraba la comprobación de requisitos. La prioridad de participación debe asignarse según estadísticas previas y necesidades del equipo, y se acuerda registrar y conservar estadísticas de partidos competitivos y no competitivos. La preparación de partidos pasa a ser punto fijo de las asambleas previas. Se plantea mejorar la formación de line up y banquillo, pero sin criterios cerrados para elegir banquillo cuando hay muchas voluntarias. Se sondeará un nuevo horario de miércoles (19:00-21:30) y se recuerda la puntualidad. <em>(Deroga la división en dos grupos de sep. 2023.)</em></div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2025:</strong> Se somete a votación terminar los miércoles antes (salir del polideportivo a las 21:30 para no pagar la media hora siguiente); las dudas sobre qué se votaba llevan a encuestas por WhatsApp, y las opciones son 18:30-21:30, 19:00-21:30 o 19:00-21:30 más 30 minutos los domingos. Se recuerda que los entrenamientos de los martes de guaxes los dirigen Bienvenida y se aprueba completar patines con materiales baratos.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2025:</strong> Entrenamientos informa de que no se entrena del 24 al 31 de diciembre.</div></div>
 
-      <h3 class="block-h3">2026</h3>
+      <h3 class="block-h3">2026 — Lines, entrenamientos sin mínimo y nueva temporada</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2026:</strong> Entrenamientos presenta el porcentaje de jams jugados en la temporada. Conclusiones para el siguiente partido: powerpack disponible por si hace falta (no como line fijo), se mantiene que juegue más quien haya jugado menos en otros partidos y los trípodes se hacen siempre con las mismas personas.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2026:</strong> Se pide revisar el botiquín (tiritas y caducidades) y se decide no cancelar el entreno por la actividad de mediación, sino mover un poco el horario de un domingo.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Junio 2026:</strong> Calendario 2026-27: se acepta empezar todes el miércoles 2 de septiembre. Las mínimas se harán en octubre (para practicar un mes completo), colectivizando las tareas del examen y decidiendo entre comité saliente y entrante si viene gente de fuera (por experiencias negativas previas). Quien entrene a guaxes y juegue un partido cercano puede intercambiar el turno con otra veterana. Se rechaza fijar un mínimo de asistentes para celebrar un entrenamiento (uno de dos personas es factible) y se insiste en apuntarse o darse de baja y en colectivizar la tarea de «dar» el entrenamiento.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2026:</strong> Calendario de sustituciones: se da otra oportunidad al formato (con recordatorios) tras el desorden de la temporada anterior; hay que guardar el día de entrenamiento y el de sustitución. La bolsa de voluntaries cubre ausencias de última hora; si nadie puede, se envía el entrenamiento y se autogestiona sin entrenadore «oficial». Se anima a une guaxe a unirse a Entrenamientos para las gestiones (Sportmember, recordatorios). Los lines siguen en Entrenamientos por su complejidad. La asistencia para jugar un partido se cuenta sobre los entrenamientos anteriores a los 15 días previos al partido (no hasta el día del partido), para evitar cambios de lines y jugadoris (ver ENT-A1).</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Octubre 2026:</strong> Mediación trasladará a Entrenamientos el miedo a lesiones de les jugadoris. Se aprueban 15 minutos de dinámicas grupales al inicio del entrenamiento del último domingo de cada mes (ver MED-4).</div></div>
+
 
       <h2 class="block-h2">Código de Normas Vigentes</h2>
 
@@ -502,13 +513,13 @@
       <div class="article-card">
         <div class="article-header">
           <span class="article-code">ENT-A1</span>
-          <span class="article-date">Adoptado: sep. 2022 · Modificado: ene. 2024, oct. 2024</span>
+          <span class="article-date">Adoptado: sep. 2022 · Modificado: ene. 2024, oct. 2024, sept. 2026</span>
         </div>
         <div class="article-body">
           <div class="block block-p"><div class="block-content">Para tener preferencia para entrar en el roster de un partido, una jugadora debe cumplir simultáneamente dos condiciones:</div></div>
-          <div class="block block-bullet"><div class="block-content">Haber asistido al 50% o más de las 8 semanas inmediatamente anteriores al partido.</div></div>
-          <div class="block block-bullet"><div class="block-content">Haber asistido al 50% o más de las 4 semanas inmediatamente anteriores al partido.</div></div>
-          <div class="block block-p"><div class="block-content">Para el cálculo se contabiliza el mismo número de miércoles que de domingos.</div></div>
+          <div class="block block-bullet"><div class="block-content">Haber asistido al 50% o más de los 8 entrenamientos anteriores a los 15 días previos al partido.</div></div>
+          <div class="block block-bullet"><div class="block-content">Haber asistido al 50% o más de los 4 entrenamientos anteriores a los 15 días previos al partido.</div></div>
+          <div class="block block-p"><div class="block-content">Para el cálculo se contabiliza el mismo número de miércoles que de domingos. El cómputo se cierra 15 días antes del partido, no el día del partido.</div></div>
           <div class="note-box warning">
             <strong>⚠️ Importante:</strong> Cumplir el mínimo da preferencia pero no garantiza el puesto. No cumplirlo tampoco excluye automáticamente: el comité puede decidir que una persona sin el mínimo juegue si hay hueco, valorando estado físico, conocimiento de estrategia y necesidades del equipo.
           </div>
@@ -594,6 +605,22 @@
           <div class="block block-p"><div class="block-content">La preparación de partidos (objetivos, lines, roles) es un punto fijo en la agenda de las asambleas ordinarias previas a cada partido.</div></div>
         </div>
       </div>
+
+      <h3 class="block-h3">Sección D — Organización de entrenamientos</h3>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">ENT-D1</span><span class="article-date">Adoptado: jun. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">No hay un número mínimo de asistentes para que se celebre un entrenamiento. Se valora la asistencia de quienes sí pueden acudir, se pide apuntarse o darse de baja con antelación y se colectiviza la tarea de «dar» el entrenamiento.</div></div>
+          <div class="note-box derogada"><strong>⛔ Norma anterior derogada:</strong> el mínimo de 4 jugadoras fijado en julio de 2018.</div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">ENT-D2</span><span class="article-date">Adoptado: sept. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Cuando falte quien dirige un entrenamiento, se acude a la bolsa de voluntaries o a la lista de contactos de quienes van a entrenar; si nadie puede, se envía el entrenamiento y se autogestiona. Quien tenga turno de entrenamiento o de sustitución debe tenerlo guardado.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">ENT-D3</span><span class="article-date">Adoptado: jun. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Si a una persona le toca entrenar a guaxes en la semana de un partido cercano que va a jugar, puede intercambiar el turno con otra veterana que no lo juegue.</div></div></div>
+      </div>
+
     </div>
 
     <!-- ====== INTERLIGA ====== -->
@@ -602,16 +629,17 @@
         <div class="section-eyebrow">Comité · INT</div>
         <h1 class="section-title">Interliga</h1>
         <div class="section-meta">
-          <span>📅 Última revisión: mayo 2026</span>
+          <span>📅 Última revisión: noviembre 2026</span>
         </div>
       </div>
 
       <h2 class="block-h2">Descripción</h2>
+      <div class="note-box info"><strong>Desde junio 2026</strong> Interliga y Arbitraje forman un único comité (<em>Interliga y Arbitraje</em>); ver sección Arbitraje.</div>
       <div class="block block-p"><div class="block-content">El Comité de Interliga acuerda y organiza los partidos con otros equipos de roller derby. Es el canal de comunicación habitual con ARDE (Asociación de Roller Derby de España). Gestiona la agenda de partidos, negocia condiciones y fechas con otros equipos, y coordina la participación en campeonatos.</div></div>
 
       <h2 class="block-h2">Historial de acuerdos</h2>
 
-      <h3 class="block-h3">2018</h3>
+      <h3 class="block-h3">2018 — Política de patrocinios</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2018:</strong> Se establece la política general de patrocinadores: se aceptarán solo si respetan los principios básicos del equipo, mediante asamblea extraordinaria y conformidad de 3/4 del equipo activo. <em>(Antecedente del vigente INT-A1.)</em></div></div>
 
       <h3 class="block-h3">2019 — Creación del comité</h3>
@@ -638,7 +666,7 @@
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2021:</strong> Se aplazan al final de temporada la visita de Las Palmas y el partido navideño propuesto por Black Thunders (hasta conocer los cruces del Nacional).</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2021:</strong> La inscripción del Nacional la paga el equipo, no cada jugadora (adelantada para 19 personas: 17 jugadoras y 2 de banquillo).</div></div>
 
-      <h3 class="block-h3">2022</h3>
+      <h3 class="block-h3">2022 — Nacional de ARDE y liguilla del norte</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2022:</strong> Se aprueba el calendario de partidos. No se aconseja un triangular cuando son dos partidos de liga contra equipos fuertes: mejor celebrarlos en fechas distintas.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2022:</strong> Calendario del Nacional: Galiza el 19 de marzo (Coruña) y Badalona el 10 de abril (Bimenes). Murcia quiere el 1 de mayo y el equipo el 30 de abril; se hace un doodle y el comité decide con Murcia. Interliga pasará un cuestionario para reunir los datos que se piden una y otra vez. Para el partido contra Botxo (19 feb) se ofrece alojamiento a dos refs.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2022:</strong> El equipo paga el alojamiento de 18 personas en Coruña (hay dinero de sobra y es el único partido fuera a la vista); los huecos sin cubrir los asume el equipo. La sede de la final de la liga ARDE se vota a favor de Cantabria el 2-3 de julio. Se crea un Directorio Güestia y se constatan problemas para conseguir refs para Galiza.</div></div>
@@ -649,7 +677,7 @@
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2022:</strong> El Nacional enfrenta al equipo con Piperrakas, Sicarias y Despeñaperras; se negocia el primer partido en Zaragoza (posible triangular). Antes de cada partido se dirá quién custodia la bolsa comunal de materiales (normalmente el banquillo), sin responsabilidad por las pertenencias personales que se saquen de ella. Los comentarios sobre la organización de partidos se dejan para valoraciones posteriores, salvo urgencias. Scrimmages previstos con Judas (Málaga), Rayo B-Lockers y Brigantias en enero. Se aprueba que ningún miembro de la Junta de ARDE pueda competir en la FEP mientras forme parte de ella.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2022:</strong> Partidos fijados: Brigantias B en casa (28 de enero), Sicarias del Cierzo en Zaragoza (11 de febrero) y Despeñaperras en Málaga (25 de marzo). Sanitarios (votación 9 a 2): Aida ocupa el puesto si está disponible y no tiene otro puesto; si no, solo se piden si los solicita el equipo rival (con ambulancia en la puerta); si no los piden, habrá una persona responsable de seguridad (llamar al 112), que no sea jugadora. Se revisará el botiquín.</div></div>
 
-      <h3 class="block-h3">2023</h3>
+      <h3 class="block-h3">2023 — Presencia en ARDE y división del Nacional</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2023:</strong> Se recuerda apuntarse a las encuestas con las que se elaboran los rosters de los partidos. Para el partido contra Brigantias B hay que llegar puntuales a las 14:00 para montar la pista.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2023:</strong> Interliga informa de un scrimmage «nivel rookie» abierto en Reus (coincide con el bootcamp, seguramente nadie asista) y de la asamblea de Team Spain, a la que no se llevan puntos.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Abril 2023:</strong> Árbitros del partido contra Piperrakas listos. Se cambia la «presidencia» ante organismos oficiales a Ripley; ya está firmado en el banco y falta el registro de club deportivo elemental.</div></div>
@@ -660,7 +688,7 @@
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2023:</strong> Se acuerda aceptar la propuesta de afterparty en Ardelucus para el partido con Brigantias B. Sobre una jugadora de Brigantias se acuerda que, al no haber habido problema con ella y no tener una posición justificada, si su equipo y refs permiten que juegue se acepta. Persona de arbitraje con proceso de mediación abierto con el equipo y ARDE (apodada «Señor Rojo» en las actas): no se quiere que arbitre y se comunicará a ARDE el rechazo a coincidir con ella como árbitra.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2023:</strong> Cris pasa a Interliga para cubrir las necesidades del comité.</div></div>
 
-      <h3 class="block-h3">2024</h3>
+      <h3 class="block-h3">2024 — Scrimmages, publicidad y relación con ARDE</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2024:</strong> Se rechaza la publicidad de una empresa en las camisetas (equipación nueva de 2023, fin de la «sponsorización» y no asociarse con una empresa); se acepta su logo en el streaming y las publicaciones de los partidos y colgar una bandera en los partidos (Henar gestiona la respuesta). La votación sobre pedir ayuda económica al ayuntamiento de Bimenes, pendiente desde oct. 2023, pasa a coordinadora.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2024:</strong> Se aprueba un Excel editable de partidos creado por Becas en colaboración con Interliga y Arbitraje, para gestionar pagos con tiempo. Se rechaza incluir en él a Merch.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2024:</strong> Contra Pink Block se decide que el encuentro sea <strong>scrimmage</strong> y no partido: para ser partido debe especificarse en el contrato (enviado un mes antes), haber sanitarios y arbitraje suficientes, y el equipo visitante venía a scrimmage; se ofrece un partido el año siguiente en la vuelta. Se propone un protocolo de agradecimiento a NSO al acabar los partidos.</div></div>
@@ -669,7 +697,7 @@
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2024:</strong> Para el Nacional se prefieren triangulares con un partido de ARDE y un amistoso el mismo día; si no es posible, triangular en casa con un partido el sábado y otro el domingo, proponiéndolo a Brigantias y RDM B (marzo/abril). Se organiza un partido con Lisboa a finales de enero. Se reservan el 22 de marzo y el 26 de abril para viajar a Reus. Interliga planteará una rotación para montar la pista. Si RDM B propone jugar el domingo tras el partido con Thunders, no será partido oficial de ARDE y será por la mañana (encuesta por Info). Reiki y Mery asisten a la asamblea de ARDE del 1 de diciembre.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2024:</strong> Para el triangular de enero con Thunders, el equipo rival propone una jammer invitada de otro equipo; todes se oponen (hay dos partidos seguidos sin descanso) y se responde con un correo asertivo explicando las razones. Fechas a barajar para el triangular de ARDE: 1-2 marzo, 15-16 marzo o 19-20 abril (encuesta).</div></div>
 
-      <h3 class="block-h3">2025</h3>
+      <h3 class="block-h3">2025 — Candidatura a la final y partidos internacionales</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2025:</strong> Se acuerda presentar candidatura a sede de la final de ARDE (Nere redacta la propuesta): Bimenes no es viable por la pista, así que se plantean ciudades grandes y que quienes cubran las funciones el día del evento no sean jugadoras. Se acuerda buscar otras pistas para el triangular de marzo por el deterioro de la de Bimenes (puede impedir el juego) y plantearlo al ayuntamiento. Sobre una posible patrocinadora, no se quieren patrocinadores al uso (marca en la camiseta), pero se escucha su propuesta.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2025:</strong> Se acuerda comentar amablemente el asunto de las gradas con Reus y ofrecer a los equipos visitantes, junto a la cena, una opción de afterparty más accesible (cervezas o picoteo en Bimenes). El estado de la pista se mantiene en conversación con el ayuntamiento y se decide que el equipo la limpie como parte de la preparación de pista.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2025:</strong> Partidos en negociación: scrimmage no competitivo con Irmandiñas el 5 de abril, triangular competitivo en Tarbes el 26-27 de abril y London C en casa a finales de mayo. Sobre los rosters de otros equipos, lo de Brigantias es legal y lo de Madrid no (máximo 3 crossover). El 21 de marzo, en asamblea extraordinaria, se decide proponer a ARDE penalizar con un año sin participar a los equipos que se retiraron, apelar a la responsabilidad colectiva y no dar por supuesta la causa de Team Spain; para los playoffs, que decidan los equipos afectados. Representantes en la reunión con ARDE: Nerea, Pale y Albama.</div></div>
@@ -679,10 +707,15 @@
       <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2025:</strong> Reiki y Albama (u otra voluntaria) acuden a la reunión de ARDE.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2025:</strong> Pista de Bimenes: el ayuntamiento propone una obra mayor que podría impedir usarla una temporada; se necesita más información sobre plazos, tantear pista para partidos y, para entrenar, valorar un parche con la obra mayor en verano. Si Thunders propone jugar: «casa antes que Madrid, Madrid antes que nada».</div></div>
 
-      <h3 class="block-h3">2026</h3>
+      <h3 class="block-h3">2026 — Fusión con Arbitraje y Nacional 2026-27</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2026:</strong> ARDE pide dos representantes de La Güestia y datos de redes: se preguntará qué implica y se buscarán voluntarias en marzo. La pista de Moreda (Gijón) es buena opción para entrenos o partidos puntuales sin dejar Bimenes como sede (Esther escribe al Patronato). Se acuerda un grupo de trabajo para presentar candidatura a sede de la final del Nacional (23 de mayo), reutilizando la del año pasado; se descarta la candidatura conjunta con Cantabria.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2026:</strong> Interliga y arbitraje deben mantener comunicación fluida y con antelación, con una persona de enlace por comité. Se recuerda que en Avilés se podría alquilar puntualmente una pista de parquet.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Abril 2026:</strong> Se recuerda que no se aceptan patrocinios, sí subvenciones como la del ayuntamiento de Bimenes. ARDE no tiene partida para actuaciones de medio tiempo y se preguntará a coordinadora si el equipo pone dinero. Interliga pide más gente y más respuestas a sus llamamientos.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Mayo 2026:</strong> Final del Nacional: reunión online de organización el 10 de mayo. El cartel, la maquetación y la publicidad se asignan a un comité (se propone imagen; Alba se ofrece; pendiente de confirmar en esa reunión).</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Junio 2026:</strong> Se aprueba fusionar Interliga y Arbitraje en un único comité, con tamaño por decidir (5 o 7 personas).</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2026:</strong> Luz verde para inscribirse en el Nacional 2026-27. Feedback del Nacional 2026 (puntuación alta): a mejorar, la aplicación homogénea del reglamento entre ligas y que la final no coincida con otros partidos o grandes eventos; a conservar, la comunidad y el madrinaje a otras ligas. Partidos: 10 de octubre en casa (puede coincidir con las pruebas de la selección) y Mallorca pendiente; cuesta cerrar fechas por las agendas 26/27 ya cerradas. Mariana asiste a la asamblea de ARDE. Se aprueba el gasto extraordinario del partido de Noruega (ver Becas y Ayudas) y se rechaza crear una cesta para recuperarlo: hay fondos, se ahorran energías para la cesta de Navidad y un acto para un grupo concreto sentaría un precedente de desigualdad.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Octubre 2026:</strong> Propuesta de presentación en partidos: túnica y vela en procesión, al estilo de la Güestia de Halloween, empezando por Noruega. Sin objeciones; se consulta en el grupo del partido.</div></div>
+
 
       <h2 class="block-h2">Código de Normas Vigentes</h2>
 
@@ -730,48 +763,50 @@
         <div class="section-eyebrow">Comité · ARB</div>
         <h1 class="section-title">Arbitraje</h1>
         <div class="section-meta">
-          <span>📅 Última revisión: marzo 2026</span>
+          <span>📅 Última revisión: noviembre 2026</span>
         </div>
       </div>
       <h2 class="block-h2">Descripción</h2>
       <div class="block block-p"><div class="block-content">El Comité de Arbitraje gestiona todo lo relacionado con árbitres (refs) y oficiales no patinadores (NSOs). Busca refs y NSOs para los partidos, gestiona los pagos por desplazamiento con tesorería, y corrige y comparte las estadísticas tras cada partido en casa.</div></div>
-      <div class="note-box pending"><strong>🔄 Pendiente (fin de temporada 2025-2026):</strong> La asamblea debatirá la posible fusión de los comités Arbitraje e Interliga.</div>
+      <div class="note-box info"><strong>✅ Resuelto (jun. 2026):</strong> La asamblea aprobó fusionar Arbitraje e Interliga en un único comité, que asume estas funciones.</div>
       <h2 class="block-h2">Historial de acuerdos</h2>
 
-      <h3 class="block-h3">2019</h3>
+      <h3 class="block-h3">2019 — Primeros pagos a oficiales</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2019:</strong> Para el partido de Valencia, el equipo paga viaje y alojamiento de refs y NSOs.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Abril 2019:</strong> En los Nacionales, el pago de NSOs y refs se garantiza antes de repartir el dinero sobrante entre las jugadoras.</div></div>
 
-      <h3 class="block-h3">2020</h3>
+      <h3 class="block-h3">2020 — Formación de oficiales</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Julio 2020:</strong> Se propone un clinic interno con los refs Fran y Germán (teoría y habilidad de patín) para que puedan patinar en Bimenes y participen en la organización y reclutamiento de oficiales. Tsuci se apunta al comité de oficiales de ARDE.</div></div>
 
-      <h3 class="block-h3">2021</h3>
+      <h3 class="block-h3">2021 — Cobertura de gastos y formación continuada</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2021:</strong> El equipo cubre alojamiento y vuelos de árbitros en partidos fuera de casa.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2021:</strong> Se aprueba una formación de árbitros continuada (clinics, visionado de faltas con jugadoras, juntarse con árbitros de otros lugares), empezando el 21 de noviembre a las 12:00 con un evento de captación de árbitros y NSO. En scrimmages con otros equipos, los árbitros faltantes se pagan a medias entre ambos equipos.</div></div>
 
-      <h3 class="block-h3">2022</h3>
+      <h3 class="block-h3">2022 — Escasez de refs y grupo de formación</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2022:</strong> Interliga tiene problemas para conseguir refs para el partido de Galiza («en peligro de extinción»).</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Mayo 2022:</strong> Se ofrecen al menos dos NSO con experiencia para las finales de ARDE (Tania y Tsuci) y se propone a otras con experiencia previa.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2022:</strong> Se aprueba un grupo de trabajo para seguir formando a árbitres propios y reclutar nuevas personas (coordinado por Meri), con teoría para jugadoras, bootcamps y sesiones de captación.</div></div>
 
-      <h3 class="block-h3">2023</h3>
+      <h3 class="block-h3">2023 — Creación del comité</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Julio 2023:</strong> Se aprueba por unanimidad de las presentes crear un comité de arbitraje con muy pocas integrantes (Tanuki, Irene y Cris Makis), para tener contacto directo con coordinadora y organizar formaciones teóricas y arbitraje en entrenamientos. Si alguien se opone, se revisa en la asamblea de septiembre.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2023:</strong> Se informa de que se harán clinics de refs.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2023:</strong> Clinic de SO y NSO coincidente con el scrimmage contra Brigantias B: se financiará con eventos asociados; se propone preguntar a Brigantias si comparte gastos, definir duración y día, y barajar traer otros refs para ahorrar en vuelos y dejar el clinic para otra ocasión. El pago a SOs y NSOs no está condicionado a los fondos.</div></div>
 
-      <h3 class="block-h3">2024</h3>
+      <h3 class="block-h3">2024 — Gastos, NSOs y objetivos</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2024:</strong> Se confirma el 28 de enero la formación de NSOs.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2024:</strong> Se acuerda que los gastos de NSO se incluyan en los de refs (si en otras actas o bases de Becas se dijo lo contrario, debe cambiarse).</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2024:</strong> Las ayudas y el dinero para árbitros, y su apartado del Excel, son responsabilidad de Arbitraje y no de Becas.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2024:</strong> Se propone un protocolo de agradecimiento a los NSO al acabar los partidos, ya que los equipos visitantes lo hacen y el nuestro no.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2024:</strong> Objetivos de Arbitraje para la temporada: reclutar oficiales y organizar posiciones para partidos, y organizar actividades de formación para oficiales.</div></div>
 
-      <h3 class="block-h3">2025</h3>
+      <h3 class="block-h3">2025 — Oficiales y camino a la fusión</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2025:</strong> Sobre un posible oficial masculino: no se está de acuerdo en que entrene con el equipo, pero sí en que arbitre en los entrenamientos. Se propone que Arbitraje organice entrenamientos para quienes quieran arbitrar, coincidiendo con los del equipo, para que entrenen habilidades de patín y luego arbitren los jams.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2025:</strong> En la revisión de comités se anota que Interliga queda con 7 personas «por fusión con arbitraje».</div></div>
 
-      <h3 class="block-h3">2026</h3>
+      <h3 class="block-h3">2026 — Coordinación y fusión con Interliga</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2026:</strong> Se constatan dificultades para definir las tareas de Arbitraje y su coordinación con Interliga. Se acuerda que alguien de Arbitraje entre en el grupo de coordinadora, que el comité acceda con frecuencia al correo, y se recuerdan sus tareas (refs y NSO, pagos por desplazamiento con tesorería y corrección y reparto de stats tras partidos en casa). Se propone una reunión de transferencia de conocimiento sobre stats y plantear en la asamblea de fin de temporada fusionar Arbitraje e Interliga.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Junio 2026:</strong> Se aprueba volver a fusionar Interliga y Arbitraje, creando un único comité.</div></div>
+
 
       <h2 class="block-h2">Código de Normas Vigentes</h2>
       <div class="article-card">
@@ -789,8 +824,14 @@
         <div class="article-header"><span class="article-code">ARB-2</span><span class="article-date">Adoptado: mar. 2026</span></div>
         <div class="article-body">
           <div class="block block-p"><div class="block-content">El Comité de Arbitraje y el Comité de Interliga designarán cada uno una persona de enlace para mantener comunicación fluida y con suficiente antelación sobre las necesidades de árbitres en cada partido.</div></div>
+          <div class="note-box derogada"><strong>⛔ Sin efecto (jun. 2026):</strong> al fusionarse ambos comités (ARB-3) ya no procede.</div>
         </div>
       </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">ARB-3</span><span class="article-date">Adoptado: jun. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Arbitraje e Interliga forman un único comité (Interliga y Arbitraje), que asume las funciones de ARB-1.</div></div></div>
+      </div>
+
     </div>
 
     <!-- ====== MEDIACIÓN ====== -->
@@ -798,7 +839,7 @@
       <div class="section-header">
         <div class="section-eyebrow">Comité · MED</div>
         <h1 class="section-title">Mediación</h1>
-        <div class="section-meta"><span>📅 Última revisión: marzo 2026</span></div>
+        <div class="section-meta"><span>📅 Última revisión: noviembre 2026</span></div>
       </div>
       <h2 class="block-h2">Descripción</h2>
       <div class="block block-p"><div class="block-content">El Comité de Mediación gestiona los conflictos interpersonales dentro del equipo y entre el equipo y personas o equipos externos. Actúa como enlace con el comité de mediación de ARDE cuando hay casos que afectan a la comunidad nacional.</div></div>
@@ -814,7 +855,7 @@
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2019:</strong> Se documenta el primer caso de mediación relevante (conflicto interno que derivó en la salida de una jugadora). Se establece como precedente que la reincorporación de una jugadora que abandonó el equipo en conflicto requiere: resolución de todos los conflictos abiertos en los plazos que necesiten las compañeras afectadas, y votación en asamblea.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2019:</strong> Se retoma el trabajo del código de conducta, asignándolo a Reiki y Layna.</div></div>
 
-      <h3 class="block-h3">2020</h3>
+      <h3 class="block-h3">2020 — Inclusión</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Julio 2020:</strong> Mediación e inclusión organizará una charla-debate interna sobre la inclusión de hombres trans en el equipo.</div></div>
 
       <h3 class="block-h3">2021 — Ampliación del comité</h3>
@@ -823,22 +864,27 @@
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2021:</strong> Aida pasa a formar parte del comité de inclusión.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Julio 2021:</strong> El comité queda formado por Cris, Sara T. y Aida para la temporada 2021-22.</div></div>
 
-      <h3 class="block-h3">2022</h3>
+      <h3 class="block-h3">2022 — Talleres y dinámicas de equipo</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2022:</strong> Se propone preparar un taller de inclusividad para un instituto de Llanes (Irene y Mery), con simulacros de jams sin patines.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2022:</strong> Jornada de dinámicas de equipo con una psicóloga el 26-27 de marzo.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Julio 2022:</strong> Entre los objetivos de equipo para 2022-23: sesiones periódicas con una psicóloga para trabajar temas de equipo.</div></div>
 
-      <h3 class="block-h3">2023</h3>
+      <h3 class="block-h3">2023 — Espacio seguro y casos con ARDE</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2023:</strong> Se recuerda que el equipo es un espacio seguro para comentar incomodidades y se aprueba por unanimidad comentar las sensaciones en asamblea tras cada partido.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2023:</strong> Hay un proceso de mediación abierto con una persona arbitral y ARDE: el equipo comunicará a ARDE su rechazo a que arbitre sus partidos.</div></div>
 
-      <h3 class="block-h3">2025</h3>
+      <h3 class="block-h3">2025 — Mediaciones de ARDE y asamblea sobre lines</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2025:</strong> Se decide no pedir que continúe el proceso de mediación con la persona apodada «Señor Rojo» en las actas, dado que ya no participa en ARDE y el comité está saturado; si volviese, se retomaría.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Abril 2025:</strong> Posición del equipo en la mediación de ARDE: veto permanente a la persona agresora (caso 1); disculpa pública de la persona y garantías de la liga para que pueda participar (caso 2); caso 3 cerrado por no pertenecer ya a la comunidad; y responsabilidad de la liga de emprender acciones restaurativas (caso 4).</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2025:</strong> Tras la mediación se convocará una asamblea sobre competitividad y lines, con documento resumen y formulario previo; se vota hacerla presencial y esperar a la ordinaria de enero, dedicando esa asamblea al punto de mediación.</div></div>
 
-      <h3 class="block-h3">2026</h3>
+      <h3 class="block-h3">2026 — Lines, nuevos protocolos y reciclaje inclusivo</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2026:</strong> En la asamblea dedicada a mediación cada persona expone su opinión sobre los lines y la gestión de niveles. Se plantean sondear al equipo sobre la metodología, incorporar a personas más nuevas a Entrenamientos, y se valora una división A/B sin acuerdo.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Junio 2026:</strong> Se considera a MartAttack incompatible con la dinámica y principios del equipo y de sus eventos. Mediación redacta el borrador de comunicación (se revisará en asamblea extraordinaria), queda pendiente el protocolo si aparece y Mediación revisa el código de conducta.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2026:</strong> Se aprueba poner en la descripción del grupo general un enlace a un formulario de mediación. El caso MartAttack se da por zanjado: se contesta un último correo (el conflicto con otra persona lo lleva ARDE) y no se responderá a más.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Octubre 2026:</strong> Mediación se coordinará con Entrenamientos (miedo a lesiones) y con Bienvenida (materiales de acogida: se reutilizará y actualizará el documento de mantenimiento de patines de Tamara y se explicará mejor cómo funcionan los comités). Se retoma el documento de funciones de cada comité.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2026:</strong> Mediación plantea el «reciclaje» de la Güestia hacia un ambiente más inclusivo y sano: más cuidado individual al hablar y una jornada de sensibilización, aprovechando una de las sesiones trimestrales de mediación. Ante la preocupación por el uso de becas del viaje a Noruega no hay decisión vinculante; Mediación ofrece hacer una propuesta (ver Becas y Ayudas).</div></div>
+
 
       <h2 class="block-h2">Código de Normas Vigentes</h2>
       <div class="article-card">
@@ -853,6 +899,19 @@
         <div class="article-header"><span class="article-code">MED-3</span><span class="article-date">Adoptado: abr. 2025</span></div>
         <div class="article-body"><div class="block block-p"><div class="block-content">En mediaciones con ARDE, la posición del equipo es que las ligas tienen responsabilidad sobre el comportamiento de sus jugadoras y deben emprender acciones restaurativas.</div></div></div>
       </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">MED-4</span><span class="article-date">Adoptado: oct. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">El último domingo de cada mes se dedican 15 minutos al inicio del entrenamiento a dinámicas grupales de mediación, para reparar, crear buen clima y fomentar la pertenencia.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">MED-5</span><span class="article-date">Adoptado: oct. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Se realiza una actividad de equipo trimestral, preferiblemente gratuita (se prefiere gastar en partidos, bootcamps, etc.). Si implica gasto, se consulta antes en asamblea o encuesta, según lo pague cada persona o el equipo.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">MED-6</span><span class="article-date">Adoptado: sept. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">La descripción del grupo general incluye un enlace al formulario para solicitar mediación.</div></div></div>
+      </div>
+
     </div>
 
     <!-- ====== TESORERÍA ====== -->
@@ -860,11 +919,12 @@
       <div class="section-header">
         <div class="section-eyebrow">Comité · TES</div>
         <h1 class="section-title">Tesorería</h1>
-        <div class="section-meta"><span>📅 Última revisión: febrero 2026</span></div>
+        <div class="section-meta"><span>📅 Última revisión: noviembre 2026</span></div>
       </div>
       <h2 class="block-h2">Descripción</h2>
       <div class="block block-p"><div class="block-content">El Comité de Tesorería gestiona el dinero del equipo: recauda cuotas, paga gastos, lleva la contabilidad y comunica periódicamente el estado de cuentas a la asamblea.</div></div>
 
+      <div class="note-box pending"><strong>🔄 Pendiente (sept. 2026):</strong> cómo conseguir más ingresos y valorar un evento especial de recaudación; las opciones de subvención o crowdfunding presentadas se votarán en asamblea.</div>
       <h2 class="block-h2">Historial de acuerdos</h2>
 
       <h3 class="block-h3">2018 — Primeros pasos</h3>
@@ -887,29 +947,34 @@
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2021:</strong> Se decide mantener el acuerdo COVID sobre cuotas (se podía optar por no pagar mientras durasen las restricciones) y se recuerda que sigue vigente la condonación de cuota por venta de merch: el equivalente a 2 camisetas (5€ de coste de producción cada una), sin perder ningún derecho y contabilizando el mes como pagado. <em>(Es el acuerdo que recoge TES-1.)</em></div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2021:</strong> Se acuerda un sistema de uso del dinero del equipo más sistemático. Gastos básicos anuales estimados: pista (2.000€), merch (1.000€), scrimmages/bootcamps (1.000€), total ~5.000€/año. Para partidos: presupuesto estimado de ~1.000€ por partido, con repartición equitativa y anónima entre jugadoras según necesidad. Se priorizará el Nacional y se hará colchón para él.</div></div>
 
-      <h3 class="block-h3">2022</h3>
+      <h3 class="block-h3">2022 — Cuenta bancaria y mínimo de 3.000 €</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2022:</strong> Se resume la situación administrativa: el equipo es Club Deportivo Elemental (CIF, alta en Hacienda y en el Principado) y los bancos piden estatutos notariales, lo que obligaría a ser Club Básico (más obligaciones: registro de socias, presupuestos, cambio de junta cada 4 años). Se acuerda que <strong>no se abrirá cuenta a nombre de personas</strong>, solo de equipo, y se crea un grupo de trabajo (Roza, Laura y Tamara). La tesorería queda sin voluntarias: se preguntará por info y, si no, se elegirá por sorteo.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2022:</strong> Se decide por unanimidad abrir la cuenta en Caja Rural (25€ al trimestre y 20€ por cada cambio de cargos), que permite seguir siendo Club Elemental (BBVA costaba 40€ al trimestre). Los cargos de la junta se sortean: Tela Marinera tesorera, Tsuci secretaria y Valeria presidenta.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2022:</strong> Se fija que siempre debe haber un mínimo de 3.000€ en la cuenta para garantizar los pagos no relacionados con becas (ver Becas y Ayudas).</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2022:</strong> Se cierra el paréntesis de no obligatoriedad de la cuota mensual (o su sustitución por venta de merch). Los casos de exención (paro, precariedad) se valorarán directamente en asamblea.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2022:</strong> Por las comisiones elevadas de la cuenta, y mientras se arregla con el banco, los pagos pequeños (máximo 30-50€) a integrantes pueden hacerse por PayPal si la persona dispone de él (no para proveedores ni polideportivo). Se emitirán informes mensuales. Los 80€ de menús no consumidos en la cena de un partido se asumen como gasto de equipo.</div></div>
 
-      <h3 class="block-h3">2023</h3>
+      <h3 class="block-h3">2023 — Cambio de titular y ajustes</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Abril 2023:</strong> Se cambia la cuenta bancaria a la nueva «presidenta» (Ripley); faltan códigos para las transferencias y el registro de club elemental.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Mayo 2023:</strong> En mayo se comunica a cada participante el estado de sus cuotas. Se analizarán necesidades y consumo medio para comprar material al por mayor. Una camiseta morada impagada por una jugadora que dejó el equipo pasa a ser propiedad del equipo, y se entregará a una jugadora nueva con dificultades que quiera adoptar ese nombre y número.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2023:</strong> Sin ingresos extra: se aclara que el pago a SOs y NSOs no está condicionado y se acepta suprimir las becas si no hay fondos. Se rechaza subir la cuota mensual. Se propone recaudar con eventos asociados a partidos, scrimmages o formaciones. Se concluye que aceptar ayuda del ayuntamiento no implica dejar de ser autogestionadas; se pide al comité Papelajos consultar los estatutos y definir de quién se acepta dinero y para qué.</div></div>
 
-      <h3 class="block-h3">2024</h3>
+      <h3 class="block-h3">2024 — Seguro y renovaciones</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2024:</strong> Se renueva el seguro de responsabilidad civil actual (128€ al año, cubre daños a terceros) tras no encontrar un seguro de equipo que cubra más; se mantiene la búsqueda. Se acepta un número «corporativo» de Pepephone para bizum (pago único).</div></div>
 
-      <h3 class="block-h3">2025</h3>
+      <h3 class="block-h3">2025 — Cuotas y subvención</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2025:</strong> Se pide cubrir el formulario de datos de cobro para becas y tesorería. Se solicita la subvención del ayuntamiento y el grupo de trabajo mantiene los resúmenes económicos.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2025:</strong> Se recuerda que quien tenga problemas para pagar la cuota puede condonarla vendiendo merch (2 camisetas); es el acuerdo de oct. 2021. Tesorería repasa las cuotas de la temporada anterior.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2025:</strong> Se decide no subir la cuota por ahora y que Tesorería compruebe los pagos cada mes. Debe haber al menos dos personas con acceso a la cuenta (sorteo si nadie quiere). El equipo paga unos patines de talla grande (32,50€) por inclusividad y para refs, «como excepción».</div></div>
 
-      <h3 class="block-h3">2026</h3>
+      <h3 class="block-h3">2026 — Datos, subvención y simulación de saldo</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2026:</strong> Se informa de que el Excel de datos tiene acceso para todos los comités y hay que cuidar los datos privados. Se recuerda a quien tenga asuntos pendientes con tesorería que lo gestione con el comité.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2026:</strong> Tesorería presenta su informe.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Junio 2026:</strong> Se acepta pedir un año más la subvención del ayuntamiento; el enlace se pasa para quienes quieran participar en la organización y se insiste en trabajar rápido porque el plazo ya está abierto.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2026:</strong> Tesorería simula la temporada 26/27 asumiendo 3.000 € de gasto ahora y dos partidos fuera más: se acabaría muy cerca del límite de 3.000 € y sin presupuesto para más viajes o bootcamps. Se mantiene el suelo de 3.000 € para aprobar ayudas.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Octubre 2026:</strong> Se renuevan por dos años las tesoreras (Ly y Albama).</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2026:</strong> Quien deje el equipo, temporal o definitivamente, avisa por email a Papelajos y a Tesorería.</div></div>
+
 
       <h2 class="block-h2">Código de Normas Vigentes</h2>
       <div class="article-card">
@@ -935,7 +1000,7 @@
       <div class="section-header">
         <div class="section-eyebrow">Comité · PAP</div>
         <h1 class="section-title">Papelajos / Organización</h1>
-        <div class="section-meta"><span>📅 Última revisión: febrero 2026</span></div>
+        <div class="section-meta"><span>📅 Última revisión: noviembre 2026</span></div>
       </div>
       <h2 class="block-h2">Descripción</h2>
       <div class="block block-p"><div class="block-content">El Comité de Papelajos es el secretariado del equipo. Convoca las asambleas, prepara el orden del día, elabora y distribuye las actas. Custodia la documentación en el drive y gestiona el correo de información general.</div></div>
@@ -969,26 +1034,26 @@
       <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2021:</strong> Se recuerda el acuerdo de que cada comité debe tener un documento actualizado en Drive con resumen de tareas y acuerdos. El objetivo es no tener que revisar actas de años anteriores para saber qué se acordó, y que las nuevas integrantes tengan acceso a esa información.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2021:</strong> Se insiste en la importancia de asistir a las asambleas; quien no pueda debe leer el orden del día y el acta y enviar sus opiniones por correo.</div></div>
 
-      <h3 class="block-h3">2022</h3>
+      <h3 class="block-h3">2022 — Canales de comunicación y actas</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2022:</strong> Se aprueba el Padlet para compartir información de forma horizontal; lo gestiona el comité de Redes con un correo específico. Se plantea retomar las asambleas presenciales.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2022:</strong> Se constatan fallos de comunicación y se buscan canales distintos de WhatsApp: reuniones presenciales u online y el Padlet. Los días de scrimmage interno empiezan con una mini reunión.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2022:</strong> Las actas recogen acuerdos y tareas, no todas las intervenciones; quien quiera que se registre una intervención lo comunica a Organización.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2022:</strong> Rebe es elegida presidenta por unanimidad. Todos los comités tendrán acceso de edición al calendario de Info y todas las demás, de visualización.</div></div>
 
-      <h3 class="block-h3">2023</h3>
+      <h3 class="block-h3">2023 — Datos, actas por turnos y contraseñas</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2023:</strong> Se revisan las cuotas y se limpian los mails y WhatsApp de personas que ya no están activas; se pasará un listado de jugadoras activas para actualizar la app de entrenamientos.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2023:</strong> Se aprueba por consenso <strong>abolir los informes de los comités</strong> (las actas recogerán lo que cada comité cuente en la asamblea) y que la tarea de tomar acta se reparta en turnos organizados, como los entrenamientos de freshies.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2023:</strong> Se propone unificar las listas de todos los comités en una sola con la información de cada jugadora, que todos puedan editar, y usar la app de entrenos también para eventos.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2023:</strong> Se aclara que convocar una asamblea anual extraordinaria requiere una petición de un mínimo del 10% de integrantes a coordinadora. Como las decisiones de asamblea son difíciles de encontrar con el tiempo, se propone apuntarlas en el Padlet.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2023:</strong> Todas las cuentas cambian la contraseña y la envían a Info (límite el jueves 7), y el teléfono asociado a cada cuenta pasa a ser el de una persona de Info para evitar el caos al recuperar accesos. Cambio de coordinadoras con límite el domingo 10, idealmente resuelto dentro de cada comité. Recordatorio por «No hablar» para entrar en comités.</div></div>
 
-      <h3 class="block-h3">2024</h3>
+      <h3 class="block-h3">2024 — Almacenamiento y comunidad de WhatsApp</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2024:</strong> Para el almacenamiento de redes se crearán cuentas de Google gratuitas por temporada, guardando las credenciales en el documento de papelajos; Henar buscará precios de un disco duro de respaldo. Se pide cribar y organizar las fotos con voluntarias.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Mayo 2024:</strong> Se aclara que, según los estatutos, la coordinadora se modifica cada 4 meses (por un malentendido no se cambia hasta julio). No hay norma sobre la entrada de guaxes en comités fuera del cambio anual: pueden entrar cuando quieran, preguntando a sus madrinas.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Julio 2024:</strong> Se registrará al equipo en el ayuntamiento de Bimenes si hace falta (Papelajos y Bitxo; límite 26 de julio), también por el tema de subvenciones. Cada comité preparará para septiembre sus objetivos, tareas y visión de temporada.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2024:</strong> Se aprueba crear una comunidad de WhatsApp de La Güestia para gestionar los grupos (Tamara y Albama hacen el cambio), con todes a favor.</div></div>
 
-      <h3 class="block-h3">2025</h3>
+      <h3 class="block-h3">2025 — Credenciales y limpieza de grupos</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2025:</strong> Todas de acuerdo en que cada comité envíe a info el correo y la contraseña para custodiarlos en el drive de papelajos. Motomari se ofrece a sustituir a Rebe como delegada deportiva.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2025:</strong> Se acuerda meter el antiguo grupo «Info (no hablar)» en la comunidad de WhatsApp para que todas puedan comentar; Avisos queda como tablón de anuncios. Se insiste en que los comités envíen sus credenciales a Info.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2025:</strong> Papelajos cubre los formularios de ARDE y envía una encuesta de WhatsApp para completar las plazas de los comités. Se ratifica que los comités se renuevan cada año salvo excepciones, que debe pedir la propia persona sin desplazar a nadie.</div></div>
@@ -996,10 +1061,15 @@
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2025:</strong> Los administradores de Avisos cambian junto con la coordinadora y se borra el grupo «No hablar» (hubo opiniones a favor de mantenerlo), se limpia la comunidad de personas inactivas y se revisan las descripciones de los grupos para quitar contraseñas. El equipo no usará ni gestionará la web que rehará una integrante como proyecto de fin de estudios.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2025:</strong> La asamblea de enero se dedica al tema de mediación y los comités solo traen puntos informativos; los temas que requieran debate pasan a la siguiente ordinaria.</div></div>
 
-      <h3 class="block-h3">2026</h3>
+      <h3 class="block-h3">2026 — Protección de datos, bajas y registro de decisiones</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2026:</strong> Se adjuntan los documentos de la nueva política de protección de datos.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2026:</strong> Se propone esperar al final de cada temporada para preguntar a quien se ausenta si sigue interesada; si no, se borran sus datos (tarea de papelajos), conservando nombre y número 10 años desde el último año que jugó. Se aprueba el uso de IA no generativa para buscar información interna.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Abril 2026:</strong> Se actualiza el reparto de personas por comités y se pide enmiendas.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Mayo 2026:</strong> Se plantea actualizar la miniguía de funciones de cada comité y de acuerdos dispersos en las actas, custodiada por Bienvenida.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2026:</strong> Comités vacíos (Redes y Eventos): se espera a la siguiente asamblea y, si nadie se apunta, se redistribuye a las personas; si sale un partido, un grupo de trabajo cubre Redes y Eventos. Se aprueban que los mínimos sean porcentuales según el total del equipo (el acta no precisa a qué mínimos se refiere) y borrar los grupos de WhatsApp en desuso; se recuerda cambiar la contraseña de cada comité y enviarla a Papelajos.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Octubre 2026:</strong> Se actualiza el directorio (email, teléfono, contacto de emergencia) y se limpian grupos de WhatsApp. Queda pendiente decidir cómo y cuándo se puede delegar el voto y el mínimo de asistentes para una asamblea general (revisar estatutos).</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2026:</strong> Albama presenta una base de datos web que unifica formularios y documentos, con acceso por comité; todes deben rellenar su ficha de jugadore y se pide un vídeo tutorial.</div></div>
+
 
       <h2 class="block-h2">Código de Normas Vigentes</h2>
       <div class="article-card">
@@ -1014,6 +1084,15 @@
         <div class="article-header"><span class="article-code">PAP-3</span><span class="article-date">Adoptado: oct. 2025</span></div>
         <div class="article-body"><div class="block block-p"><div class="block-content">La comunidad de WhatsApp se mantendrá actualizada: limpieza periódica de personas inactivas, revisión de descripciones de grupos para eliminar contraseñas, y verificación de que el acceso a grupos de comité requiere permiso.</div></div></div>
       </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">PAP-4</span><span class="article-date">Adoptado: nov. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Papelajos contacta directamente con quien parezca inactive para saber si continúa. Quien deje el equipo, temporal o definitivamente, informa por email a Papelajos y a Tesorería.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">PAP-5</span><span class="article-date">Adoptado: nov. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Papelajos recopila los acuerdos de coordinadora entre una asamblea y otra y los lleva como punto a la siguiente asamblea para ratificarlos.</div></div></div>
+      </div>
+
     </div>
 
     <!-- ====== BIENVENIDA ====== -->
@@ -1021,7 +1100,7 @@
       <div class="section-header">
         <div class="section-eyebrow">Comité · BIE</div>
         <h1 class="section-title">Bienvenida</h1>
-        <div class="section-meta"><span>📅 Última revisión: octubre 2025</span></div>
+        <div class="section-meta"><span>📅 Última revisión: noviembre 2026</span></div>
       </div>
       <h2 class="block-h2">Descripción</h2>
       <div class="block block-p"><div class="block-content">El Comité de Bienvenida recluta nuevas jugadoras y las recibe en las jornadas de bienvenida. Las nuevas incorporaciones se denominan guaxes o fresis: personas que aún no tienen el nivel mínimo de seguridad y fluidez en patines. Tras superar el examen de mínimas, pasan a ser veteranas y pueden jugar partidos.</div></div>
@@ -1055,24 +1134,28 @@
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2021:</strong> Se aprueba elaborar un <strong>tríptico informativo</strong> con los valores del equipo para entregar a las freshies en el momento de incorporación, colgar en redes y usar en jornadas de puertas abiertas. Una vez creado, se presentará en asamblea para aprobación de su contenido.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2021:</strong> Se leen los estatutos y el código básico de conducta. El equipo se reafirma en sus valores. No hay propuestas de modificación.</div></div>
 
-      <h3 class="block-h3">2022</h3>
+      <h3 class="block-h3">2022 — Un único reclutamiento anual</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Julio 2022:</strong> Se acuerda un único reclutamiento al año (septiembre), con un número máximo de freshies por reclutamiento, y transmitir a las nuevas el concepto de autogestión (organizar entrenos cuando las veteranas tienen partido, grupos de teoría, NSO…). <em>(Sustituye los dos periodos de reclutamiento de julio de 2019.)</em></div></div>
 
-      <h3 class="block-h3">2023</h3>
+      <h3 class="block-h3">2023 — «Les Guaxes»</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2023:</strong> Se aprueba reevaluar abrir un nuevo periodo de freshies, al haber muy pocas entrenando y no entrar más hasta septiembre; bienvenida y entrenamientos valorarán fecha y método, posiblemente junto al bootcamp de freshies.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Julio 2023:</strong> Se aprueba por unanimidad llamar <strong>«Les Guaxes»</strong> al grupo de freshies (por el ser mitológico asturiano).</div></div>
 
-      <h3 class="block-h3">2024</h3>
+      <h3 class="block-h3">2024 — Reclutamiento y convivencia</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2024:</strong> Se llama a Bienvenida a asignar madrinas a las guaxas sin ellas, incluir a quien ya haya pasado el mes de prueba en los grupos de WhatsApp y enviar los papeles formales. Colaboración con el CRA La Coroña (actividad del Día del Deporte, 8-12 de abril, por la mañana).</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2024:</strong> Reclutamiento el martes 19 de marzo a las 19:00, para filtrar a quienes pueden venir los martes. Planes: flyers bilingües en universidades, carteles, performance en patines y hablar con la asamblea de estudiantes.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Mayo 2024:</strong> Convivencia el sábado 6 de julio: taller de patines, scrimmage de fin de temporada y convivencia (se intenta reservar la Algodonera).</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Julio 2024:</strong> Se valora centralizar la gestión de freshies en un único comité: se opta por ceder tareas a Entrenamientos y que Bienvenida asuma otras, con propuesta conjunta en septiembre. La entrada al equipo debe hacerse siempre en fecha fija.</div></div>
 
-      <h3 class="block-h3">2025</h3>
+      <h3 class="block-h3">2025 — Fin de semana de bienvenida</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2025:</strong> Se valora un nuevo reclutamiento a finales de marzo o principios de abril, al no afectar al curso de los partidos.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2025:</strong> Fin de semana de bienvenida el tercer fin de semana de septiembre (19-21), con un artículo en un medio local una o dos semanas antes y más movimiento en Bimenes y alrededores.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2025:</strong> Bienvenida es responsable de los martes de guaxes; se constata que el curso anterior solo colaboró el primer mes, sin organizar mínimas ni acceso a la app. Para jugadoras de corta estancia se propone no pagar el primer mes (como las guaxas) y después pagar la cuota; si quieren jugar, el protocolo de quien llega de otro equipo.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2025:</strong> Nuevas jornadas de bienvenida el 18 de enero, no el 11, para dejar esa fecha a la asamblea de mediación.</div></div>
+
+            <h3 class="block-h3">2026 — Acogida y orden del almacén</h3>
+      <div class="block block-bullet"><div class="block-content"><strong>Mayo 2026:</strong> Bienvenida dedicará los entrenos del 7, 10, 14 y 17 de junio a ordenar e inventariar la zona de derby (patines, protes, cascos); otras voluntarias ayudarán en la primera parte del entreno.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2026:</strong> Almu se suma al comité. Oct. 2026: se actualizarán los materiales de acogida con Mediación.</div></div>
 
       <h2 class="block-h2">Código de Normas Vigentes</h2>
       <div class="article-card">
@@ -1094,7 +1177,7 @@
       <div class="section-header">
         <div class="section-eyebrow">Comité · EVE</div>
         <h1 class="section-title">Eventos</h1>
-        <div class="section-meta"><span>📅 Última revisión: abril 2025</span></div>
+        <div class="section-meta"><span>📅 Última revisión: noviembre 2026</span></div>
       </div>
       <h2 class="block-h2">Descripción</h2>
       <div class="block block-p"><div class="block-content">El Comité de Eventos organiza las actividades sociales relacionadas con partidos: afterparties, tercer tiempo, y logística de tentempié para los partidos. También gestiona otros eventos del equipo como comidas, fiestas y actividades de recaudación.</div></div>
@@ -1108,32 +1191,35 @@
       <h3 class="block-h3">2019 — Primeros acuerdos de eventos</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2019:</strong> Se propone dar un toque distinto a los eventos y no hacer cosas siempre ligadas a alcohol y fiesta. Se acuerda centrar los eventos de captación y recaudación desde verano hasta enero-febrero.</div></div>
 
-      <h3 class="block-h3">2021</h3>
+      <h3 class="block-h3">2021 — Recaudación y colaboraciones</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2021:</strong> Se propone un evento recaudatorio abriendo al público el segundo scrimmage del mes (entrada simbólica, merch y picoteo o espicha). También un vídeo de apoyo a la manifestación de la oficialidá bailando en patines.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2021:</strong> Colaboración con La Benéfica (sorteo abierto con aportaciones que desgravan): eventos presentará propuesta. Ideas: cesta con artistas locales, cena en el Manglar y calendario con Banksyastur con fines solidarios. Se cancela el Amagüestu por no encajar fechas.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2021:</strong> Comida tras el scrimmage con Botxo Killers: el equipo invita a NSOs, refs y jugadoras de las Botxo; cada güestia y acompañante paga su comida. El salón de actos de Martimporra cedido para la comida.</div></div>
 
-      <h3 class="block-h3">2022</h3>
+      <h3 class="block-h3">2022 — Tercer tiempo y pagos por adelantado</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2022:</strong> En el afterparty de un partido en casa, el comité calcula los gastos y se reparten entre las personas apuntadas; el equipo paga lo que corresponde a NSO y refs, no el de las jugadoras.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2022:</strong> Tercer tiempo: se acuerda minimizar, priorizar, anticipar y pedir ayuda. No es obligatorio hacer cena, fiesta ni los «detallinos»; se decide antes de cada partido según haya cena y fondos. No se hace distinción entre refs y NSO de casa o de fuera. Se elaborará una infografía-protocolo en el Padlet.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2022:</strong> Los pagos de cenas y eventos se harán por adelantado, tras faltar mucha gente a una cena. El comité anterior tenía un protocolo de fechas y casos para devolver el dinero, que se pasará al comité actual.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2022:</strong> Eventos llevará la organización pero pedirá voluntarias del equipo para varias tareas, para que no recaigan en una o dos personas (todas a favor).</div></div>
 
-      <h3 class="block-h3">2023</h3>
+      <h3 class="block-h3">2023 — Colaboraciones y eventos recaudatorios</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2023:</strong> Se aprueba el intercambio de actividades con un grupo excursionista LGTBIQ+: una jornada explicativa de roller derby por nuestra parte y asistir a una ruta suya en primavera.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Mayo 2023:</strong> Para reducir plásticos en los partidos, se compran dos bidones de agua de 20-30L con grifo (uno por banquillo) y se pide a los equipos traer su botella; si no, se dan vasos. Se aprueban flyers informativos del deporte y del partido. Se acuerda un mismo premio para todos los partidos de la temporada, elegido por encuesta (la medalla de madera es una opción).</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2023:</strong> Se organiza una ruta de equipo como actividad fuera del horario de entreno; Eventos se ofrece a organizar.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2023:</strong> Camiseta especial para Jorge, el del polideportivo: trabajo voluntario (Tamara y Irene).</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2023:</strong> Se aprueban los eventos recaudatorios propuestos (roller disco con Cabranes y en Xixón, cesta de Navidad de 150€, bingo musical) y el afterparty con Brigantias en Ardelucus. Se pide más orientación sobre los objetivos de recaudación y se proponen ideas (socixs de la Güestia, tiradas temporales de merch, cintas para patines, bolsas grandes).</div></div>
 
-      <h3 class="block-h3">2024</h3>
+      <h3 class="block-h3">2024 — Festivales y causas solidarias</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2024:</strong> Se acepta la participación en el festival LGTBI si hay un mínimo de 5 voluntarias, y colaborar con el evento de La Brujona para recaudar fondos para la asociación ELA (camiseta con firmas). Se aprueba participar en el fanzine La Nueva Paisana.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2024:</strong> Presentación para Cruz Roja: actividad de dos horas un sábado en Gijón, sin fechar.</div></div>
 
-      <h3 class="block-h3">2025</h3>
+      <h3 class="block-h3">2025 — Cruz Roja y locales sin conflictos laborales</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2025:</strong> Se acuerda colaborar con la Cruz Roja el 22 de marzo. Se propone fomentar socies con pañuelos (10€ al año, de distinto color cada año), carné y rifas para la cesta de Navidad. Bingo musical el 1 de marzo en el Manglar.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Abril 2025:</strong> No se harán más eventos en El Manglar por conflictos laborales y se evitará Les Cigarreres; <strong>el equipo no organiza eventos en sitios con constancia de abusos o desprotección laboral</strong>. Se propone L'apeaderu como alternativa.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Mayo 2025:</strong> El Orgullín pide que el equipo salga en patines (27-29 de junio); hace falta más información. Se descarta un evento de serigrafía, concierto y pinchada en el Kuivi por ser demasiado grande y se prefiere el Rocket. Jornada en un colegio del 28 al 30 de mayo. El 25 de mayo, en vez del vermú, «sextaferia» para ordenar y limpiar el almacén.</div></div>
+
+            <h3 class="block-h3">2026 — Comité por reconstruir</h3>
+      <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2026:</strong> El comité está vacío; se pospone el evento de recaudación hasta que se forme. Octubre: faltan aún personas y se propone que quienes están en la bolsa de voluntaries roten para cubrir el puesto.</div></div>
 
       <h2 class="block-h2">Código de Normas Vigentes</h2>
       <div class="article-card">
@@ -1151,7 +1237,7 @@
       <div class="section-header">
         <div class="section-eyebrow">Comité · MER</div>
         <h1 class="section-title">Merch</h1>
-        <div class="section-meta"><span>📅 Última revisión: abril 2026</span></div>
+        <div class="section-meta"><span>📅 Última revisión: noviembre 2026</span></div>
       </div>
       <h2 class="block-h2">Descripción</h2>
       <div class="block block-p"><div class="block-content">El Comité de Merch diseña, encarga y vende el merchandising del equipo como fuente de ingresos. También gestiona el mecanismo de condonación de cuota mediante venta de merch para jugadoras en dificultad económica.</div></div>
@@ -1169,14 +1255,14 @@
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2019:</strong> Se establece que una donación puntual de dinero no es suficiente para incluir el logo del donante en las camisetas. La intención es llevar pocos logos y que sean de los donantes más significativos. Se puede ofrecer publicidad en RRSS y lonas como alternativa.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Abril 2019:</strong> Se acuerda hacer un informe detallado de gastos y ganancias de merch en la última asamblea de cada mes. Una persona del comité merch y una de entrenamientos tendrá acceso a las redes sociales para facilitar la subida de contenido.</div></div>
 
-      <h3 class="block-h3">2021</h3>
+      <h3 class="block-h3">2021 — Merch «rural derby»</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2021:</strong> Se agotan las mascarillas LGRD; no se hace otra tirada por ahora. Se aprueban imanes abrechapas (posible pack con cerveza de Caleya) y se investiga abrir tienda en Etsy para compra directa.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Abril 2021:</strong> Se aprueba el merch «rural derby»: parche de madreña (pedido mínimo de 100) y tres artículos nuevos (sudadera, riñonera y gorra). Anisakis busca presupuestos.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2021:</strong> Se aprueba la propuesta y presupuesto de un nuevo pedido (alta demanda interna, incluir tallas XXL, diseño de madreñas y felechos). Redes publicará el catálogo en los perfiles y Alejandra se incorpora al comité.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2021:</strong> Camisetas para nuevas jugadoras: cada jugadora paga la suya y se la queda; se sacan sin publicidad para que cada tanda sea igual; solo pueden pedirla quienes tengan las mínimas aprobadas. Cambio de proveedor aplazado a la siguiente asamblea.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2021:</strong> Llegan los parches (pendientes de coser) y se piden las camisetas oficiales.</div></div>
 
-      <h3 class="block-h3">2022</h3>
+      <h3 class="block-h3">2022 — Nuevas equipaciones y precios</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2022:</strong> Se aprueba la propuesta de merch (cosas que se venden bien). Camisetas oficiales: cada una paga la suya, y pedir varias a la vez abarata el precio; se estudia un nuevo diseño pagando a quien lo haga.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2022:</strong> Se aprueba el nuevo diseño de la camiseta de segunda equipación: se mantienen por normativa el tamaño y posición del número de espalda y del pequeño delantero. Se aprobará presupuesto por doodle.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2022:</strong> Para la equipación blanca gana el boceto de la madreña en la espalda. La asamblea está de acuerdo en cambiar de proveedor por la mala calidad de las moradas. Pedido de totes «Love RD, hate fascism», chapas, parches bordados rural derby y camisetas con la madreña.</div></div>
@@ -1185,24 +1271,26 @@
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2022:</strong> Se aprueba subir las camisetas a 12€ y los totes a 10€. Se hará una tirada de 100 estampitas de la Virgen del patín esguinzador tras sondear en redes, y se estudian sudaderas con cremallera (posible pre-order) y tazas. Antes de nuevos pedidos se pasará un cuestionario interno y habrá descuento para jugadoras (sin concretar).</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2022:</strong> Se aprueba un «Güestidescuento» de aproximadamente el 15% sobre el PVP, solo para integrantes, solo en productos bajo pedido, sin bajar del precio de coste y por una unidad de cada producto; el comité publicará los pedidos, los precios y un plazo. Camiseta del V aniversario con logo normal y curva solo arriba; taza de cerámica sin asa; pegatinas (250 hate fascism de 30mm, 250 Güestia de 50mm y 100 de cada diseño de Pale Ale) y chapas (50 de cada diseño).</div></div>
 
-      <h3 class="block-h3">2023</h3>
+      <h3 class="block-h3">2023 — Autofinanciación con merch</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2023:</strong> Se aprueba pedir la equipación morada a la nueva empresa, con mejor calidad (como las blancas).</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2023:</strong> Se aprueba vender merch para autofinanciar los viajes y se habla con Merch de los beneficios. Camiseta especial para Jorge.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2023:</strong> Ideas recaudatorias con merch: tiradas temporales, cintas para patines, bolsas grandes y camisetas «Love RD, hate transfobia».</div></div>
 
-      <h3 class="block-h3">2024</h3>
+      <h3 class="block-h3">2024 — Nuevos productos y causas</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2024:</strong> Se pide una nueva tirada de riñoneras (al menos 30, el doble) por su buena venta, y una encuesta por Redes sobre nuevos diseños de Bitxo (madreña con felechos, bolsas de rafia, láminas de carteles, bragas y calcetines). Se necesita cartel para el partido del 9 de marzo. Se propone coger pedidos de merch a los equipos contra los que se juega fuera.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2024:</strong> Los totes se descartan por repetitivos; se recuerdan las bolsas de gran capacidad y calcetines que brillan en la oscuridad.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2024:</strong> Se propone vender merch de la causa Salvemos Peñamayor en los partidos (todes a favor).</div></div>
 
-      <h3 class="block-h3">2025</h3>
+      <h3 class="block-h3">2025 — Posición sobre IA</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Mayo 2025:</strong> Tamara cede una mesa para merch, no hace falta comprarla.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2025:</strong> El equipo se posiciona en contra del uso de IA en diseño (carteles, merch…), de acuerdo con el escrito de Pale Ale.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2025:</strong> Diana se incorpora a Merch.</div></div>
 
-      <h3 class="block-h3">2026</h3>
+      <h3 class="block-h3">2026 — Pedidos habituales y equipación inclusiva</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2026:</strong> Merch no necesita permiso de coordinadora para renovar pedidos habituales, solo para novedades.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Abril 2026:</strong> Se reitera que no se cambian las camisetas ni se aceptan vallas publicitarias.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2026:</strong> Se propone ampliar la equipación a modelos más inclusivos y cómodos; sin decisión.</div></div>
+
 
       <h2 class="block-h2">Código de Normas Vigentes</h2>
       <div class="article-card">
@@ -1224,7 +1312,7 @@
       <div class="section-header">
         <div class="section-eyebrow">Comité · RED</div>
         <h1 class="section-title">Redes Sociales</h1>
-        <div class="section-meta"><span>📅 Última revisión: septiembre 2025</span></div>
+        <div class="section-meta"><span>📅 Última revisión: noviembre 2026</span></div>
       </div>
       <h2 class="block-h2">Descripción</h2>
       <div class="block block-p"><div class="block-content">El Comité de Redes Sociales gestiona la presencia del equipo en Instagram y TikTok. Publica contenido sobre la actividad del equipo, reclutamiento, partidos y posicionamientos institucionales.</div></div>
@@ -1240,29 +1328,32 @@
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2019:</strong> Se acuerda que los mensajes importantes en WhatsApp se escriban EN MAYÚSCULAS Y NEGRITA para que se vean mejor sin tener que leer todos los mensajes.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2019:</strong> Los comités de comunicación interna y externa se disuelven como comités separados, ya que cada comité tiene autonomía suficiente para comunicarse con quien sea necesario. Las RRSS pasan a Vane y Zoraida.</div></div>
 
-      <h3 class="block-h3">2021</h3>
+      <h3 class="block-h3">2021 — Vídeo, canciones y catálogo</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2021:</strong> La firma del manifiesto feminista por los derechos de las personas trans caducó; se podrá hacer una declaración pública si redes lo considera oportuno.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2021:</strong> Colaboración con Puru Remangu en un vídeo/documental sobre el equipo: grabación el 20 de marzo; voces en asturiano: Nerea, Tsuci y Valeria.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2021:</strong> El grupo TRT compone una canción dedicada a La Güestia (valores feministas y antifascistas). Redes publicará el catálogo de merch en los perfiles.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2021:</strong> MUSOC proyectará el vídeo de La Güestia + Puru Remangu, siempre que Puru Remangu esté de acuerdo.</div></div>
 
-      <h3 class="block-h3">2022</h3>
+      <h3 class="block-h3">2022 — Padlet y promoción del merch</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2022:</strong> Se aprueba el Padlet para compartir información del equipo; Redes lo gestionará con un correo propio.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2022:</strong> Se sugiere que Diana se incorpore al comité de Redes para promocionar el merch.</div></div>
 
-      <h3 class="block-h3">2023</h3>
+      <h3 class="block-h3">2023 — Anuario del deporte femenino</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2023:</strong> Por unanimidad se rechaza participar en el anuario del deporte femenino de Asturias («No, gracias»).</div></div>
 
-      <h3 class="block-h3">2024</h3>
+      <h3 class="block-h3">2024 — TikTok y vídeos</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2024:</strong> Sobre un vídeo para Instagram: no se paga publicidad, pero por el éxito del vídeo de Puru Remangu se valora hacer un vídeo educativo del juego; por mayoría se aprueba presentar la idea a la persona que se ofreció (Henar gestiona).</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2024:</strong> Se aprueba crear un TikTok de La Güestia (avisando antes quien no quiera aparecer y comprobando el consentimiento de uso de imagen). Se decide crear cuentas de Google por temporada para guardar el material.</div></div>
 
-      <h3 class="block-h3">2025</h3>
+      <h3 class="block-h3">2025 — Posición sobre IA</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2025:</strong> Se aprueba posicionarse en redes en contra del uso de IA; Papelajos manda el punto a ARDE.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2025:</strong> Se aprueba por unanimidad dejar de publicar «de tres en tres» en Instagram (no es una prohibición).</div></div>
 
-      <h3 class="block-h3">2026</h3>
+      <h3 class="block-h3">2026 — Datos para ARDE y «La madeja»</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2026:</strong> Redes pasa a Info los datos de las redes del equipo para ARDE.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Mayo 2026:</strong> Se forma un grupo de trabajo para un artículo de dos páginas en «La madeja» (para julio).</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2026:</strong> El comité de Redes está vacío. Octubre: se pide difundir más la acampada de Oviedo.</div></div>
+
 
       <h2 class="block-h2">Código de Normas Vigentes</h2>
       <div class="article-card">
@@ -1280,18 +1371,18 @@
       <div class="section-header">
         <div class="section-eyebrow">Comité · BEC</div>
         <h1 class="section-title">Becas y Ayudas</h1>
-        <div class="section-meta"><span>📅 Última revisión: octubre 2025</span></div>
+        <div class="section-meta"><span>📅 Última revisión: noviembre 2026</span></div>
       </div>
       <h2 class="block-h2">Descripción</h2>
-      <div class="block block-p"><div class="block-content">El Comité de Becas y Ayudas gestiona las ayudas económicas del equipo para facilitar la participación en partidos fuera de Asturias (desplazamiento, alojamiento). Gestiona un fondo específico para esta finalidad.</div></div>
+      <div class="block block-p"><div class="block-content">El Comité de Becas y Ayudas gestiona las ayudas económicas del equipo para facilitar la participación en partidos y scrimmages a más de 100 km del lugar de juego habitual (Polideportivo Melanio Asensio, San Julián de Bimenes): desplazamiento y alojamiento. Contacto: becasayudasguestia@gmail.com. Gestiona un fondo específico para esta finalidad.</div></div>
       <h2 class="block-h2">Historial de acuerdos</h2>
 
-      <h3 class="block-h3">2022</h3>
+      <h3 class="block-h3">2022 — Nacimiento del sistema de becas</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Julio 2022:</strong> Se aprueban de forma genérica las becas para sufragar gastos de partidos: dos becadas por partido, con posibilidad de renunciar, y fijar un porcentaje según el presupuesto de alojamiento y desplazamiento de cada partido (6 abstenciones, 0 en contra). Grupo de trabajo: Roza, Lydia, Rebeca, Piyuca, Sara y Motomari.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2022:</strong> En la asamblea del 4 se abre el plazo de solicitud de becas y se acuerda cubrir solo becas en el partido contra Brigantias. En la extraordinaria del 18 se aprueba la ayuda básica para el partido de Coruña y se acuerda que los partidos siguientes tengan: un mínimo de 3.000€ siempre en cuenta; privacidad al solicitar (una única persona del grupo por partido, o mediación); informar al equipo del total destinado a becas sin dar nombres; sin límite de becas por partido mientras se cumpla el mínimo (excepciones, en asamblea); ayuda básica prioritaria; resolución con tiempo suficiente; y eventos si hay poco dinero, nunca obligatorios.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2022:</strong> El grupo de trabajo se consolida como <strong>comité de Ayudas y Becas</strong>. Se aprueba el «Sistema de Becas y Ayudas» con la modificación de que el comité puede aplicarlo hasta que la cuenta llegue a 3.000€; a partir de ahí, las propuestas de gasto de partido (ayuda básica, becas o gastos adicionales) se aprueban en asamblea.</div></div>
 
-      <h3 class="block-h3">2023</h3>
+      <h3 class="block-h3">2023 — Debate sobre mantener las becas</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2023:</strong> Ante la propuesta del comité de quitar las becas, la mayoría prefiere mantenerlas; se pide al equipo que proponga mecanismos de asignación para cuando haya muchas solicitudes y al comité una revisión del gasto del año.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Julio 2023:</strong> Se decide por unanimidad no retirar las becas; si hay más solicitudes que becas, el problema pasa a coordinadora o a asamblea.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2023:</strong> Reiki propone ampliar las becas a eventos y scrimmages de otros equipos (pendiente de tratar).</div></div>
@@ -1299,22 +1390,67 @@
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2023:</strong> Con la tesorería sin ingresos extra se acepta suprimir las becas si no hay fondos.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2023:</strong> El comité necesita personas: Nerea se ofrece de forma condicionada y los comités buscarán quién puede pasarse a Becas.</div></div>
 
-      <h3 class="block-h3">2024</h3>
+      <h3 class="block-h3">2024 — Protocolo más ágil</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Enero 2024:</strong> Al no presentarse voluntarixs, Nerea deja Eventos y pasa a Becas.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2024:</strong> Se revisa el protocolo de becas para hacerlo más ágil y evitar derroches. Los gastos de NSO entran en los de refs; el puesto de merch no se becará por no ser siempre rentable. La facturación de maletas es prioritaria, así que se proponen más eventos (por ejemplo socios) y más puntos de venta de merch.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Marzo 2024:</strong> Se modifica la normativa: las becas serán «hasta X cantidad». Quien acepte una beca y no pueda asistir al partido debe devolver el dinero. Solo una persona física puede presentarse a la Beca Jumpers (el premio hay que declararlo); se prepara un vídeo. Para el alojamiento se acepta la propuesta de Becas como solución hasta fin de temporada y se pide revisar el tema en la asamblea general.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Mayo 2024:</strong> Ayuda de alojamiento: se plantea volver al método de la temporada anterior por franjas o zonas según kilometraje, revisando el gasto de las dos últimas temporadas; habrá viajes con cobertura más ajustada y para eso están las becas completas.</div></div>
 
-      <h3 class="block-h3">2025</h3>
+      <h3 class="block-h3">2025 — Bases de becas y ayudas</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2025:</strong> Se aprueba por unanimidad la propuesta del comité de Becas y Ayudas.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2025:</strong> Se pide cubrir el formulario de datos de cobro de becas y tesorería.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2025:</strong> Ideas para usar el dinero que ofrece el ayuntamiento: becas, facturar maletas y material.</div></div>
 
+            <h3 class="block-h3">2026 — Viaje a Noruega y presupuesto extraordinario</h3>
+      <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2026:</strong> Asamblea ordinaria: se aprueba el gasto extraordinario del viaje a Noruega y subir ayuda y beca, con tope de 2.500 € si hay muchas solicitudes. Asamblea extraordinaria (20 sept.): salieron más becas de las previstas y las cuentas no cuadraban; se aprueba por consenso un presupuesto de 3.100 €: 5 becas de 290 € y 11 ayudas de 150 € (en lugar de los 80 € habituales). Se recuerda que no hay fondos separados para becas y ayudas, que se prioriza las becas y que Tesorería debe aprobar el gasto para que queden siempre 3.000 €; nadie debe sentirse mal por pedir beca y se puede rechazar la ayuda.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Octubre 2026:</strong> No se reciben propuestas de modificación de las bases, que se mantienen. Becas y ayudas estudia una propuesta.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2026:</strong> Leia expone que algunas becas pedidas para Noruega no se habrían usado correctamente, sin querer que dejen de pedirse. No hay decisión vinculante; se baraja tratarlo en cada asamblea o con mediación externa, y Mediación hará una propuesta.</div></div>
+
       <h2 class="block-h2">Código de Normas Vigentes</h2>
       <div class="article-card">
         <div class="article-header"><span class="article-code">BEC-1</span><span class="article-date">Temporada en curso</span></div>
-        <div class="article-body"><div class="block block-p"><div class="block-content">El Comité de Becas y Ayudas gestiona de forma autónoma las solicitudes de ayuda económica para desplazamientos a partidos fuera de Asturias, dentro del presupuesto asignado por la asamblea.</div></div></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">El Comité de Becas y Ayudas gestiona de forma autónoma las solicitudes de ayuda económica para desplazamientos a partidos y scrimmages a más de 100 km de Bimenes, dentro del presupuesto asignado por la asamblea.</div></div></div>
       </div>
+
+      <h3 class="block-h3">Sección A — Ayuda básica al desplazamiento</h3>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">BEC-2</span><span class="article-date">Bases 10/02/2025 · Confirmadas oct. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Les jugadores y el personal de banquillo reciben una compensación en partidos y scrimmages a más de 100 km del lugar de juego habitual. Importes:<table class="aid-table"><tr><th>Zona (km)</th><th>Alojamiento</th><th>Desplazamiento</th><th>Total</th></tr><tr><td>100–299</td><td>0 €</td><td>10 €</td><td>10 €</td></tr><tr><td>300–499</td><td>10 €</td><td>20 €</td><td>30 €</td></tr><tr><td>500–899</td><td>20 €</td><td>40 €</td><td>60 €</td></tr><tr><td>+900 / vuelo obligatorio</td><td>20 €</td><td>60 €</td><td>80 €</td></tr></table></div></div>
+          <div class="note-box warning"><strong>Aplicación excepcional (sept. 2026):</strong> para Noruega se aprobó una ayuda de 150 € por persona.</div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">BEC-3</span><span class="article-date">Bases 10/02/2025 · Confirmadas oct. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Las cuantías pueden aumentarse en casos excepcionales, tras evaluación de Tesorería y con aprobación en asamblea o coordinadora.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">BEC-4</span><span class="article-date">Bases 10/02/2025 · Confirmadas oct. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Las ayudas y becas dependen de la disponibilidad económica. Si el presupuesto deja menos de 3.000 € en la cuenta, se reducen o suspenden hasta regularizarlo, avisando por WhatsApp con 30 días naturales de antelación si es posible.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">BEC-5</span><span class="article-date">Bases 10/02/2025 · Confirmadas oct. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Se puede rechazar la ayuda total o parcialmente comunicándolo por email a becasayudasguestia@gmail.com al menos 15 días antes del evento.</div></div></div>
+      </div>
+
+      <h3 class="block-h3">Sección B — Beca extraordinaria</h3>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">BEC-6</span><span class="article-date">Bases 10/02/2025 · Confirmadas oct. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Si la ayuda básica no cubre los gastos mínimos para asistir, se puede solicitar una beca que cubre solo alojamiento y desplazamiento hasta el lugar del evento (no comida, transporte local ni otros gastos). Su importe se calcula con el transporte más económico y el mínimo de noches en el alojamiento común del equipo. Cada persona reserva su viaje, conoce con antelación la cantidad y puede pedir menos de lo aprobado.</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">BEC-7</span><span class="article-date">Bases 10/02/2025 · Confirmadas oct. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">La beca se solicita por separado para cada evento, por email y con al menos 30 días de antelación. Si las solicitudes superan los fondos, se informa al equipo para que quien quiera renuncie a su ayuda básica y se redistribuya.</div></div></div>
+      </div>
+
+      <h3 class="block-h3">Sección C — Condiciones generales</h3>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">BEC-8</span><span class="article-date">Bases 10/02/2025 · Confirmadas oct. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Para recibir cualquier ayuda hay que tener al día la cuota de membresía en cualquiera de sus modalidades (cuota, venta de merch, etc.).</div></div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">BEC-9</span><span class="article-date">Bases 10/02/2025 · Confirmadas oct. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Cualquier cambio en cuantías, prioridades o proceso se vota en asamblea; las situaciones no previstas se comunican por email y la solución se registra en futuras versiones. Cada persona beneficiaria valora su situación y renuncia a la ayuda si puede afrontar el gasto sin perjuicio significativo, y la usa solo para su fin.</div></div></div>
+      </div>
+
     </div>
 
     <!-- ====== NORMAS GENERALES ====== -->
@@ -1322,7 +1458,7 @@
       <div class="section-header">
         <div class="section-eyebrow">Normas transversales · GEN</div>
         <h1 class="section-title">Normas Generales de Funcionamiento</h1>
-        <div class="section-meta"><span>📅 Última revisión: mayo 2026</span></div>
+        <div class="section-meta"><span>📅 Última revisión: noviembre 2026</span></div>
       </div>
 
       <h2 class="block-h2">Historial de acuerdos</h2>
@@ -1341,34 +1477,40 @@
       <div class="block block-bullet"><div class="block-content"><strong>Julio 2020:</strong> Se crea el correo laguestia.arde@gmail.com para las personas que participen en comités de ARDE, para no perder comunicaciones.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Julio 2020:</strong> Se debate la postura del equipo sobre la inclusión de hombres trans. Se pospone a una charla-debate organizada por mediación e inclusión. <em>(El debate formal sobre criterios de género en el equipo continuó en años posteriores.)</em></div></div>
 
-      <h3 class="block-h3">2021</h3>
+      <h3 class="block-h3">2021 — Nuevos comités y almacén</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Julio 2021:</strong> Composición de comités 2021-22 con dos comités nuevos: Traducción (Tsuci, Lola) y CARmité (apoyo moral y sabiduría). Las personas sin comité pueden unirse al que prefieran.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2021:</strong> Se acuerda cuidar el orden del almacén (esquina cedida al equipo): jornada de limpieza y etiquetas en las estanterías.</div></div>
 
-      <h3 class="block-h3">2022</h3>
+      <h3 class="block-h3">2022 — Objetivos de equipo y un comité por persona</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Julio 2022:</strong> Objetivos de equipo 2022-23: entrenamientos por objetivos mensuales, un scrimmage mensual, jugar más partidos, más derby en el entrenamiento de freshies, cero entrenos cancelados por falta de asistencia, un entreno de físico semanal por cuenta propia, sesiones con la psicóloga y más motivación e implicación. Se reorganizan los comités de la temporada 2022-23.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2022:</strong> Se acuerda que cada persona participe en un solo comité (salvo excepciones) y que cada comité estime las personas que necesita. Se recuerda que los comités coordinan y no tienen que hacer todo el trabajo: pueden pedir ayuda al resto a través del grupo «No hablar».</div></div>
 
-      <h3 class="block-h3">2023</h3>
+      <h3 class="block-h3">2023 — Reestructuración y ayuda municipal</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2023:</strong> Los representantes de la coordinadora cambian cada tres meses; cada comité hace el cambio.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2023:</strong> Se reestructuran los comités con el modelo del curso anterior: Entrenamientos 5, Tesorería 1, Mediación 3, Organización 2, Redes 2, Merch 3, Becas y ayudas 3, Eventos 3, Bienvenida 2 y Arbitraje 3. Hay 29 personas apuntadas y hacen falta 32; primero se apunta quien no tiene comité y, si no se llenan, se mueve a gente.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2023:</strong> Se concluye que aceptar ayuda económica del ayuntamiento no implica dejar de ser autogestionadas, porque no condiciona las acciones; se revisarán los estatutos y los límites de quién se acepta dinero.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2023:</strong> Se recuerda que quien no entra en un comité cuando toca debe incorporarse a uno que necesite gente y no tiene el mismo derecho a elegir. Se acepta que Entrenamientos tenga las personas presentes ahora, pese a que en octubre se fijaron 5.</div></div>
 
-      <h3 class="block-h3">2024</h3>
+      <h3 class="block-h3">2024 — Mínimos por comité y Peñamayor</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Mayo 2024:</strong> Se informa de que, según los estatutos, la coordinadora cambia cada 4 meses; las guaxes pueden entrar en comités fuera del cambio anual.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Julio 2024:</strong> Mínimos de personas por comité: Entrenamientos 7, Tesorería 1, Mediación 3, Organización 2, Redes 2, Merch 3 (podrían ser 2), Becas y ayudas 3, Eventos 4, Bienvenida 3, Arbitraje 3 e Interliga 5. Excepciones a la rotación anual: Mery, Irene y Marina se mantienen en su comité (unanimidad). Se apoya la lucha ciudadana contra una posible mina en Peñamayor, registrando al equipo en el ayuntamiento.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2024:</strong> Nuevo reparto de comités y tarea para cada uno: un documento con tareas, objetivos y planes de la temporada, más otro de orientación para quien entre nuevo. Se pedirá a las voluntarias hablar con la gestora del polideportivo sobre limpieza, vestuarios inundados y luces.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Octubre 2024:</strong> Se aprueba apoyar el manifiesto de la plataforma Salvemos Peñamayor (adhesión: Ali). Se recuerda que aún hay comités sin cambiar los miembros de la coordinadora. Estado final de los comités 2024-25 fijado en acta.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Diciembre 2024:</strong> Se reafirma el apoyo a Salvemos Peñamayor, moviendo la hoja de firmas y el merch de la causa.</div></div>
 
-      <h3 class="block-h3">2025</h3>
+      <h3 class="block-h3">2025 — Reparto de comités y posicionamientos</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Junio 2025:</strong> Reparto de comités y mínimos de personas: Entrenamientos 7, Tesorería 1, Mediación 3, Organización 2, Redes 2, Merch 3, Becas 2, Eventos 4, Bienvenida 3, Interliga (7 por fusión con arbitraje) y bolsa de voluntarias; no se necesita un comité específico para ARDE.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2025:</strong> Se confirma la composición de comités de la temporada 2025-26 y se aprueban por unanimidad dos acuerdos: dejar de publicar de tres en tres en redes y que los partidos, no las personas, sean competitivos o no competitivos.</div></div>
 
-      <h3 class="block-h3">2026</h3>
+      <h3 class="block-h3">2026 — IA, bolsa de voluntaries y cargos</h3>
       <div class="block block-bullet"><div class="block-content"><strong>Febrero 2026:</strong> Se aprueba usar IA no generativa para la búsqueda de información interna.</div></div>
       <div class="block block-bullet"><div class="block-content"><strong>Abril 2026:</strong> Se llama a que quien esté en un comité y no pueda comprometerse se apunte a la bolsa de voluntarias («es trabajo de todas»). Se recuerda que el equipo limitó el uso de IA para imágenes y se quiere ampliar a todos los ámbitos.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Mayo 2026:</strong> Almacén: se acuerda que de cara a la próxima temporada los comités se turnen por orden alfabético para ordenarlo una vez al mes, y que Info lo recuerde por Avisos; se propone un cartel para apuntar tareas y fechas. Se acepta asistir como oyentes a la jornada sobre big data e IA (LUCE, Gijón).</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Junio 2026:</strong> Comités 2026-27 (mínimos): Tesorería 1, Mediación 3, Entrenamientos 7, Organización 2, Redes 2, Merch 3, Becas 2, Eventos 4, Bienvenida 3, Interliga y Arbitraje (5 o 7) y bolsa de voluntaries. Ideas recogidas tras la asamblea: documento anual de cada comité en el drive, que una persona saliente continúe un año para asistir a quien entra, seguimiento trimestral de Mediación y revisar tareas antes del cambio.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Septiembre 2026:</strong> Se propone dar acceso al grupo de coordinadora a la bolsa de voluntaries (aprobado en octubre).</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Octubre 2026:</strong> Eventos necesita más personas; se recuerda que la bolsa es para quien no pueda estar en un comité por mucho tiempo y por causas excepcionales. Se recuerda la importancia de asistir a las asambleas. Se renuevan los cargos administrativos y se retoma el documento de funciones de los comités.</div></div>
+      <div class="block block-bullet"><div class="block-content"><strong>Noviembre 2026:</strong> Se acuerda apoyar la huelga como entidad social (solo supone ofrecer apoyo).</div></div>
+
 
       <h3 class="block-h3">Composición y Rotación</h3>
       <div class="article-card">
@@ -1406,6 +1548,25 @@
         <div class="article-header"><span class="article-code">GEN-7</span><span class="article-date">Feb. 2026</span></div>
         <div class="article-body"><div class="block block-p"><div class="block-content">Si una jugadora se ausenta, desaparece o deja de pagar cuota, se esperará al final de cada temporada para preguntar si sigue interesada. Si no, se eliminan sus datos y se la retira de grupos y correos (tarea de papelajos). El número y nombre se conservan 10 años desde el último año en que jugó.</div></div></div>
       </div>
+
+      <h3 class="block-h3">Almacén</h3>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">GEN-8</span><span class="article-date">Adoptado: may. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Cada mes un comité, por orden alfabético, ordena el almacén. Info lo recuerda por Avisos.</div></div></div>
+      </div>
+
+      <h3 class="block-h3">Bolsa de voluntaries y coordinadora</h3>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">GEN-9</span><span class="article-date">Adoptado: oct. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Una persona de la bolsa de voluntaries entra en el grupo de coordinadora, en rotación como el resto, con voto, para trasladar la opinión de la bolsa. La bolsa tiene su propio grupo de WhatsApp.</div></div></div>
+      </div>
+
+      <h3 class="block-h3">Cargos administrativos</h3>
+      <div class="article-card">
+        <div class="article-header"><span class="article-code">GEN-10</span><span class="article-date">Renovados: oct. 2026</span></div>
+        <div class="article-body"><div class="block block-p"><div class="block-content">Delegada deportiva (presidenta): Motomari. Secretaria: Tsuci. Tesoreras: Ly (Lydia) y Albama. Renovados por dos años en la asamblea de octubre de 2026.</div></div></div>
+      </div>
+
     </div>
 
   </main>
@@ -1433,7 +1594,7 @@
 (function () {
   /* ---------- Estilos nuevos ---------- */
   var css = `
-  #search{width:280px;max-width:40vw;padding:7px 14px;border-radius:20px;border:1px solid rgba(167,139,250,.4);
+  #search{margin-left:auto;width:280px;max-width:40vw;padding:7px 14px;border-radius:20px;border:1px solid rgba(167,139,250,.4);
     background:rgba(255,255,255,.12);color:#fff;font:inherit;font-size:14px;outline:none}
   #search::placeholder{color:rgba(255,255,255,.6)}
   #search:focus{background:rgba(255,255,255,.2);border-color:var(--purple-mid)}
@@ -1561,7 +1722,7 @@
 
   var input = mk('input'); input.id = 'search'; input.type = 'search'; input.autocomplete = 'off';
   input.placeholder = 'Buscar en la normativa…  ( / )';
-  document.querySelector('header .logo').after(input);
+  var _logo=document.querySelector('header .logo'); if(_logo){_logo.after(input);}else{document.querySelector('header').append(input);}
 
   function norm(s) {
     return Array.from(s).map(function (c) {
@@ -1663,6 +1824,21 @@
     if (e.key === '/' && document.activeElement !== input && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) {
       e.preventDefault(); input.focus();
     }
+  });
+})();
+</script>
+<script>
+(function(){
+  function mkBtn(cls){
+    var b=document.createElement('button'); b.type='button';
+    b.className='back-btn'+(cls?' '+cls:''); b.textContent='← Volver al inicio';
+    b.onclick=function(){ var i=document.getElementById('search'); if(i){i.value='';} window.showSection('home'); };
+    return b;
+  }
+  document.querySelectorAll('main > .section').forEach(function(sec){
+    if(sec.id==='section-home'||sec.id==='section-search') return;
+    sec.insertBefore(mkBtn(),sec.firstChild);
+    sec.appendChild(mkBtn('bottom'));
   });
 })();
 </script>
